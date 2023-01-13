@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBB531C62967EFC9005757CA /* APIHeartRate.docc in Sources */ = {isa = PBXBuildFile; fileRef = BBB531C52967EFC9005757CA /* APIHeartRate.docc */; };
+		BBB531C72967EFC9005757CA /* APIHeartRate.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB531C42967EFC9005757CA /* APIHeartRate.h */; };
+		BBB531E62967F044005757CA /* HRPeripheral.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531CD2967F043005757CA /* HRPeripheral.swift */; };
+		BBB531E72967F044005757CA /* BleErrorDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531CE2967F043005757CA /* BleErrorDomain.swift */; };
+		BBB531E82967F044005757CA /* HRPeripheralConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531CF2967F044005757CA /* HRPeripheralConfiguration.swift */; };
+		BBB531E92967F044005757CA /* HRCentralStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D02967F044005757CA /* HRCentralStateMachine.swift */; };
+		BBB531EA2967F044005757CA /* APIHeartRateImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D12967F044005757CA /* APIHeartRateImp.swift */; };
+		BBB531EB2967F044005757CA /* HRSendDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D22967F044005757CA /* HRSendDataTask.swift */; };
+		BBB531EC2967F044005757CA /* HRConnectionAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D32967F044005757CA /* HRConnectionAttempt.swift */; };
+		BBB531ED2967F044005757CA /* HRCBPeripheralDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D42967F044005757CA /* HRCBPeripheralDelegateProxy.swift */; };
+		BBB531EE2967F044005757CA /* BleDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D52967F044005757CA /* BleDevice.swift */; };
+		BBB531EF2967F044005757CA /* BleDicoveryDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D62967F044005757CA /* BleDicoveryDevice.swift */; };
+		BBB531F02967F044005757CA /* HRPeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D72967F044005757CA /* HRPeer.swift */; };
+		BBB531F12967F044005757CA /* HRRemotePeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D82967F044005757CA /* HRRemotePeer.swift */; };
+		BBB531F22967F044005757CA /* HRCBCentralManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531D92967F044005757CA /* HRCBCentralManagerDelegateProxy.swift */; };
+		BBB531F32967F044005757CA /* HRScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531DA2967F044005757CA /* HRScanner.swift */; };
+		BBB531F42967F044005757CA /* HRConnectionPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531DB2967F044005757CA /* HRConnectionPool.swift */; };
+		BBB531F52967F044005757CA /* HRRemoteCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531DC2967F044005757CA /* HRRemoteCentral.swift */; };
+		BBB531F62967F044005757CA /* HRDiscoveriesChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531DD2967F044005757CA /* HRDiscoveriesChange.swift */; };
+		BBB531F72967F044005757CA /* BleAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531DE2967F044005757CA /* BleAvailability.swift */; };
+		BBB531F82967F044005757CA /* HRRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531DF2967F044005757CA /* HRRepository.swift */; };
+		BBB531F92967F044005757CA /* HRCentral.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531E02967F044005757CA /* HRCentral.swift */; };
+		BBB531FA2967F044005757CA /* HRContinuousScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531E12967F044005757CA /* HRContinuousScanner.swift */; };
+		BBB531FB2967F044005757CA /* APIHeartRateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531E22967F044005757CA /* APIHeartRateObserver.swift */; };
+		BBB531FC2967F044005757CA /* HRCBPeripheralManagerDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531E32967F044005757CA /* HRCBPeripheralManagerDelegateProxy.swift */; };
+		BBB531FD2967F044005757CA /* HRPeripheralStateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531E42967F044005757CA /* HRPeripheralStateMachine.swift */; };
+		BBB531FE2967F044005757CA /* HRConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB531E52967F044005757CA /* HRConfiguration.swift */; };
+		BBB5322A296810A0005757CA /* APIHeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB53229296810A0005757CA /* APIHeartRateManager.swift */; };
+		BBB5325729686E42005757CA /* HRServiceConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5325629686E42005757CA /* HRServiceConst.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BBB531C12967EFC9005757CA /* APIHeartRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIHeartRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB531C42967EFC9005757CA /* APIHeartRate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIHeartRate.h; sourceTree = "<group>"; };
+		BBB531C52967EFC9005757CA /* APIHeartRate.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = APIHeartRate.docc; sourceTree = "<group>"; };
+		BBB531CD2967F043005757CA /* HRPeripheral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRPeripheral.swift; sourceTree = "<group>"; };
+		BBB531CE2967F043005757CA /* BleErrorDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleErrorDomain.swift; sourceTree = "<group>"; };
+		BBB531CF2967F044005757CA /* HRPeripheralConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRPeripheralConfiguration.swift; sourceTree = "<group>"; };
+		BBB531D02967F044005757CA /* HRCentralStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRCentralStateMachine.swift; sourceTree = "<group>"; };
+		BBB531D12967F044005757CA /* APIHeartRateImp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHeartRateImp.swift; sourceTree = "<group>"; };
+		BBB531D22967F044005757CA /* HRSendDataTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRSendDataTask.swift; sourceTree = "<group>"; };
+		BBB531D32967F044005757CA /* HRConnectionAttempt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRConnectionAttempt.swift; sourceTree = "<group>"; };
+		BBB531D42967F044005757CA /* HRCBPeripheralDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRCBPeripheralDelegateProxy.swift; sourceTree = "<group>"; };
+		BBB531D52967F044005757CA /* BleDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleDevice.swift; sourceTree = "<group>"; };
+		BBB531D62967F044005757CA /* BleDicoveryDevice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleDicoveryDevice.swift; sourceTree = "<group>"; };
+		BBB531D72967F044005757CA /* HRPeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRPeer.swift; sourceTree = "<group>"; };
+		BBB531D82967F044005757CA /* HRRemotePeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRRemotePeer.swift; sourceTree = "<group>"; };
+		BBB531D92967F044005757CA /* HRCBCentralManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRCBCentralManagerDelegateProxy.swift; sourceTree = "<group>"; };
+		BBB531DA2967F044005757CA /* HRScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRScanner.swift; sourceTree = "<group>"; };
+		BBB531DB2967F044005757CA /* HRConnectionPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRConnectionPool.swift; sourceTree = "<group>"; };
+		BBB531DC2967F044005757CA /* HRRemoteCentral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRRemoteCentral.swift; sourceTree = "<group>"; };
+		BBB531DD2967F044005757CA /* HRDiscoveriesChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRDiscoveriesChange.swift; sourceTree = "<group>"; };
+		BBB531DE2967F044005757CA /* BleAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BleAvailability.swift; sourceTree = "<group>"; };
+		BBB531DF2967F044005757CA /* HRRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRRepository.swift; sourceTree = "<group>"; };
+		BBB531E02967F044005757CA /* HRCentral.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRCentral.swift; sourceTree = "<group>"; };
+		BBB531E12967F044005757CA /* HRContinuousScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRContinuousScanner.swift; sourceTree = "<group>"; };
+		BBB531E22967F044005757CA /* APIHeartRateObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHeartRateObserver.swift; sourceTree = "<group>"; };
+		BBB531E32967F044005757CA /* HRCBPeripheralManagerDelegateProxy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRCBPeripheralManagerDelegateProxy.swift; sourceTree = "<group>"; };
+		BBB531E42967F044005757CA /* HRPeripheralStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRPeripheralStateMachine.swift; sourceTree = "<group>"; };
+		BBB531E52967F044005757CA /* HRConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HRConfiguration.swift; sourceTree = "<group>"; };
+		BBB53229296810A0005757CA /* APIHeartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHeartRateManager.swift; sourceTree = "<group>"; };
+		BBB5325629686E42005757CA /* HRServiceConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HRServiceConst.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBB531BE2967EFC9005757CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBB531B72967EFC9005757CA = {
+			isa = PBXGroup;
+			children = (
+				BBB531C32967EFC9005757CA /* APIHeartRate */,
+				BBB531C22967EFC9005757CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBB531C22967EFC9005757CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBB531C12967EFC9005757CA /* APIHeartRate.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBB531C32967EFC9005757CA /* APIHeartRate */ = {
+			isa = PBXGroup;
+			children = (
+				BBB53229296810A0005757CA /* APIHeartRateManager.swift */,
+				BBB531D12967F044005757CA /* APIHeartRateImp.swift */,
+				BBB531E22967F044005757CA /* APIHeartRateObserver.swift */,
+				BBB531DF2967F044005757CA /* HRRepository.swift */,
+				BBB531DE2967F044005757CA /* BleAvailability.swift */,
+				BBB531D92967F044005757CA /* HRCBCentralManagerDelegateProxy.swift */,
+				BBB531D42967F044005757CA /* HRCBPeripheralDelegateProxy.swift */,
+				BBB531E32967F044005757CA /* HRCBPeripheralManagerDelegateProxy.swift */,
+				BBB531E02967F044005757CA /* HRCentral.swift */,
+				BBB531D02967F044005757CA /* HRCentralStateMachine.swift */,
+				BBB531E52967F044005757CA /* HRConfiguration.swift */,
+				BBB531D32967F044005757CA /* HRConnectionAttempt.swift */,
+				BBB531DB2967F044005757CA /* HRConnectionPool.swift */,
+				BBB531E12967F044005757CA /* HRContinuousScanner.swift */,
+				BBB531DD2967F044005757CA /* HRDiscoveriesChange.swift */,
+				BBB531D62967F044005757CA /* BleDicoveryDevice.swift */,
+				BBB531CE2967F043005757CA /* BleErrorDomain.swift */,
+				BBB531D72967F044005757CA /* HRPeer.swift */,
+				BBB531CD2967F043005757CA /* HRPeripheral.swift */,
+				BBB531CF2967F044005757CA /* HRPeripheralConfiguration.swift */,
+				BBB531E42967F044005757CA /* HRPeripheralStateMachine.swift */,
+				BBB531DC2967F044005757CA /* HRRemoteCentral.swift */,
+				BBB531D82967F044005757CA /* HRRemotePeer.swift */,
+				BBB531D52967F044005757CA /* BleDevice.swift */,
+				BBB531DA2967F044005757CA /* HRScanner.swift */,
+				BBB531D22967F044005757CA /* HRSendDataTask.swift */,
+				BBB5325629686E42005757CA /* HRServiceConst.swift */,
+				BBB531C42967EFC9005757CA /* APIHeartRate.h */,
+				BBB531C52967EFC9005757CA /* APIHeartRate.docc */,
+			);
+			path = APIHeartRate;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BBB531BC2967EFC9005757CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB531C72967EFC9005757CA /* APIHeartRate.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BBB531C02967EFC9005757CA /* APIHeartRate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBB531CA2967EFC9005757CA /* Build configuration list for PBXNativeTarget "APIHeartRate" */;
+			buildPhases = (
+				BBB531BC2967EFC9005757CA /* Headers */,
+				BBB531BD2967EFC9005757CA /* Sources */,
+				BBB531BE2967EFC9005757CA /* Frameworks */,
+				BBB531BF2967EFC9005757CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = APIHeartRate;
+			productName = APIHeartRate;
+			productReference = BBB531C12967EFC9005757CA /* APIHeartRate.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBB531B82967EFC9005757CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					BBB531C02967EFC9005757CA = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = BBB531BB2967EFC9005757CA /* Build configuration list for PBXProject "APIHeartRate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBB531B72967EFC9005757CA;
+			productRefGroup = BBB531C22967EFC9005757CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBB531C02967EFC9005757CA /* APIHeartRate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBB531BF2967EFC9005757CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBB531BD2967EFC9005757CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB531ED2967F044005757CA /* HRCBPeripheralDelegateProxy.swift in Sources */,
+				BBB531EE2967F044005757CA /* BleDevice.swift in Sources */,
+				BBB531F92967F044005757CA /* HRCentral.swift in Sources */,
+				BBB531E82967F044005757CA /* HRPeripheralConfiguration.swift in Sources */,
+				BBB531F82967F044005757CA /* HRRepository.swift in Sources */,
+				BBB531FA2967F044005757CA /* HRContinuousScanner.swift in Sources */,
+				BBB531E72967F044005757CA /* BleErrorDomain.swift in Sources */,
+				BBB531FB2967F044005757CA /* APIHeartRateObserver.swift in Sources */,
+				BBB531C62967EFC9005757CA /* APIHeartRate.docc in Sources */,
+				BBB531F42967F044005757CA /* HRConnectionPool.swift in Sources */,
+				BBB531E92967F044005757CA /* HRCentralStateMachine.swift in Sources */,
+				BBB531F52967F044005757CA /* HRRemoteCentral.swift in Sources */,
+				BBB531EB2967F044005757CA /* HRSendDataTask.swift in Sources */,
+				BBB5322A296810A0005757CA /* APIHeartRateManager.swift in Sources */,
+				BBB531EC2967F044005757CA /* HRConnectionAttempt.swift in Sources */,
+				BBB531FC2967F044005757CA /* HRCBPeripheralManagerDelegateProxy.swift in Sources */,
+				BBB531F72967F044005757CA /* BleAvailability.swift in Sources */,
+				BBB531F62967F044005757CA /* HRDiscoveriesChange.swift in Sources */,
+				BBB531F32967F044005757CA /* HRScanner.swift in Sources */,
+				BBB5325729686E42005757CA /* HRServiceConst.swift in Sources */,
+				BBB531F22967F044005757CA /* HRCBCentralManagerDelegateProxy.swift in Sources */,
+				BBB531EA2967F044005757CA /* APIHeartRateImp.swift in Sources */,
+				BBB531FE2967F044005757CA /* HRConfiguration.swift in Sources */,
+				BBB531F02967F044005757CA /* HRPeer.swift in Sources */,
+				BBB531FD2967F044005757CA /* HRPeripheralStateMachine.swift in Sources */,
+				BBB531F12967F044005757CA /* HRRemotePeer.swift in Sources */,
+				BBB531EF2967F044005757CA /* BleDicoveryDevice.swift in Sources */,
+				BBB531E62967F044005757CA /* HRPeripheral.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BBB531C82967EFC9005757CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = mh_dylib;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BBB531C92967EFC9005757CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACH_O_TYPE = mh_dylib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BBB531CB2967EFC9005757CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KE6K9E8UN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.apiheart;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBB531CC2967EFC9005757CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 9KE6K9E8UN;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = mh_dylib;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.real.apiheart;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBB531BB2967EFC9005757CA /* Build configuration list for PBXProject "APIHeartRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB531C82967EFC9005757CA /* Debug */,
+				BBB531C92967EFC9005757CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBB531CA2967EFC9005757CA /* Build configuration list for PBXNativeTarget "APIHeartRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB531CB2967EFC9005757CA /* Debug */,
+				BBB531CC2967EFC9005757CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBB531B82967EFC9005757CA /* Project object */;
+}

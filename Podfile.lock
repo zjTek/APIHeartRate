@@ -1,0 +1,20 @@
+PODS:
+  - IQKeyboardManager (6.5.11)
+  - SSZipArchive (2.0.7)
+
+DEPENDENCIES:
+  - IQKeyboardManager
+  - SSZipArchive (= 2.0.7)
+
+SPEC REPOS:
+  trunk:
+    - IQKeyboardManager
+    - SSZipArchive
+
+SPEC CHECKSUMS:
+  IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
+  SSZipArchive: 8c197761d66bd33e7f8b5b51ee57dff303971150
+
+PODFILE CHECKSUM: 2baf3d579e7fd93ddb7955566ad3325f1de38325
+
+COCOAPODS: 1.11.2

@@ -1,0 +1,15 @@
+.DS_Store
+Pods/
+/.build
+/Packages
+/*.xcodeproj
+xcuserdata/
+DerivedData/
+.swiftpm/config/registries.json
+.swiftpm/xcode/package.xcworkspace/contents.xcworkspacedata
+.netrc
+APIHeartRate/*.xcframework
+APIHeartRate/*.framework
+APIHeartRate/archives
+APIHeartRate/*.podspec
+APIHeartRate/test/
