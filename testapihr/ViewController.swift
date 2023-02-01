@@ -7,8 +7,6 @@
 
 import IHProgressHUD
 import SnapKit
-import SSZipArchive
-import SwiftXLSX
 import UIKit
 import APIHeartRate
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIHeartRateObserver {
@@ -65,21 +63,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return btn
     }()
 
-    lazy var exportBtn: TestBtn = {
-        let btn = TestBtn(frame: CGRect.zero, title: "导出心率数据") { [weak self] _ in
-            self?.exportExls()
-        }
-        btn.isEnabled = false
-        return btn
-    }()
-
-    lazy var clearBtn: TestBtn = {
-        let btn = TestBtn(frame: CGRect.zero, title: "清空心率数据") { [weak self] _ in
-            self?.clearRateRecord()
-        }
-        btn.isEnabled = false
-        return btn
-    }()
+//    lazy var exportBtn: TestBtn = {
+//        let btn = TestBtn(frame: CGRect.zero, title: "导出心率数据") { [weak self] _ in
+//            self?.exportExls()
+//        }
+//        btn.isEnabled = false
+//        return btn
+//    }()
+//
+//    lazy var clearBtn: TestBtn = {
+//        let btn = TestBtn(frame: CGRect.zero, title: "清空心率数据") { [weak self] _ in
+//            self?.clearRateRecord()
+//        }
+//        btn.isEnabled = false
+//        return btn
+//    }()
 
     var bgColor = UIColor(red: 241 / 255.0, green: 241 / 255.0, blue: 241 / 255.0, alpha: 1)
     override func viewDidLoad() {
@@ -92,8 +90,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         view.addSubview(disConBtn)
         view.addSubview(connectBtn)
         view.addSubview(txtFied2)
-        view.addSubview(exportBtn)
-        view.addSubview(clearBtn)
+//        view.addSubview(exportBtn)
+//        view.addSubview(clearBtn)
         tableView.snp.makeConstraints { make in
             make.topMargin.equalTo(10)
             make.width.equalToSuperview()
@@ -121,16 +119,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             make.right.equalTo(connectBtn.snp.left)
             make.bottom.equalTo(connectBtn.snp.bottom)
         }
-        exportBtn.snp.makeConstraints { make in
-            make.top.equalTo(txtFied2.snp_bottomMargin).offset(20)
-            make.left.equalTo(txtFied2)
-            make.size.equalTo(CGSizeMake(140, 50))
-        }
-        clearBtn.snp.makeConstraints { make in
-            make.top.equalTo(exportBtn)
-            make.left.equalTo(exportBtn.snp.right).offset(30)
-            make.size.equalTo(CGSizeMake(140, 50))
-        }
+//        exportBtn.snp.makeConstraints { make in
+//            make.top.equalTo(txtFied2.snp_bottomMargin).offset(20)
+//            make.left.equalTo(txtFied2)
+//            make.size.equalTo(CGSizeMake(140, 50))
+//        }
+//        clearBtn.snp.makeConstraints { make in
+//            make.top.equalTo(exportBtn)
+//            make.left.equalTo(exportBtn.snp.right).offset(30)
+//            make.size.equalTo(CGSizeMake(140, 50))
+//        }
         if let ud = UserDefaults.standard.object(forKey: ViewController.CONNECTED_KEY) as? [String] {
             for str in ud {
                 if let uuid = UUID(uuidString: str) {
@@ -153,55 +151,55 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         dataPaired = apiManager.getPairedDevices(uuid: cntUUID)
     }
 
-    func clearRateRecord() {
-        dataHeart = []
-        clearBtn.isEnabled = false
-        exportBtn.isEnabled = false
-    }
-
+//    func clearRateRecord() {
+//        dataHeart = []
+//        clearBtn.isEnabled = false
+//        exportBtn.isEnabled = false
+//    }
+//
     func updateRateRecord(v: HRInfo) {
         dataHeart.append(v)
-        if !clearBtn.isEnabled {
-            clearBtn.isEnabled = true
-            exportBtn.isEnabled = true
-        }
+//        if !clearBtn.isEnabled {
+//            clearBtn.isEnabled = true
+//            exportBtn.isEnabled = true
+//        }
     }
 
-    func exportExls() {
-        if dataHeart.isEmpty {
-            IHProgressHUD.showError(withStatus: "没有心率数据")
-            return
-        }
-        IHProgressHUD.show()
-        let book = XWorkBook()
-        let sheet = book.NewSheet("心率数据")
-
-        for row in 1 ... dataHeart.count {
-            sheet.ForColumnSetWidth(row, 80)
-            let item = dataHeart[row - 1]
-            let cell = sheet.AddCell(XCoords(row: row, col: 1))
-            cell.value = .text(item.time)
-            let cell2 = sheet.AddCell(XCoords(row: row, col: 2))
-            cell2.value = .text(item.rateStr)
-        }
-        let files = book.save("test.xlsx")
-        print("<<<File XLSX generated!>>>")
-        print("\(files)")
-        if let lastIndex = files.lastIndex(of: "/") {
-            let prefixPath = files[files.startIndex ..< lastIndex]
-            let newPath = String(prefixPath) + "/rate.xlsx"
-            let ok = SSZipArchive.createZipFile(atPath: newPath, withContentsOfDirectory: files, keepParentDirectory: false, withPassword: nil)
-            IHProgressHUD.dismiss()
-            if ok {
-                _ = RemoveFile(path: files)
-                let fileUrl = NSURL(fileURLWithPath: newPath)
-                let shareV = UIActivityViewController(activityItems: [fileUrl], applicationActivities: nil)
-                present(shareV, animated: true)
-            }
-        } else {
-            IHProgressHUD.dismiss()
-        }
-    }
+//    func exportExls() {
+//        if dataHeart.isEmpty {
+//            IHProgressHUD.showError(withStatus: "没有心率数据")
+//            return
+//        }
+//        IHProgressHUD.show()
+//        let book = XWorkBook()
+//        let sheet = book.NewSheet("心率数据")
+//
+//        for row in 1 ... dataHeart.count {
+//            sheet.ForColumnSetWidth(row, 80)
+//            let item = dataHeart[row - 1]
+//            let cell = sheet.AddCell(XCoords(row: row, col: 1))
+//            cell.value = .text(item.time)
+//            let cell2 = sheet.AddCell(XCoords(row: row, col: 2))
+//            cell2.value = .text(item.rateStr)
+//        }
+//        let files = book.save("test.xlsx")
+//        print("<<<File XLSX generated!>>>")
+//        print("\(files)")
+//        if let lastIndex = files.lastIndex(of: "/") {
+//            let prefixPath = files[files.startIndex ..< lastIndex]
+//            let newPath = String(prefixPath) + "/rate.xlsx"
+//            let ok = SSZipArchive.createZipFile(atPath: newPath, withContentsOfDirectory: files, keepParentDirectory: false, withPassword: nil)
+//            IHProgressHUD.dismiss()
+//            if ok {
+//                _ = RemoveFile(path: files)
+//                let fileUrl = NSURL(fileURLWithPath: newPath)
+//                let shareV = UIActivityViewController(activityItems: [fileUrl], applicationActivities: nil)
+//                present(shareV, animated: true)
+//            }
+//        } else {
+//            IHProgressHUD.dismiss()
+//        }
+//    }
 
     private func RemoveFile(path pathfile: String) -> Bool {
         do {

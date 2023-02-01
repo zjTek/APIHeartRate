@@ -1,20 +1,28 @@
 PODS:
+  - APIHeartRate (0.0.5)
+  - IHProgressHUD (0.1.4)
   - IQKeyboardManager (6.5.11)
-  - SSZipArchive (2.0.7)
+  - SnapKit (5.6.0)
 
 DEPENDENCIES:
+  - APIHeartRate (= 0.0.5)
+  - IHProgressHUD
   - IQKeyboardManager
-  - SSZipArchive (= 2.0.7)
+  - SnapKit
 
 SPEC REPOS:
   trunk:
+    - APIHeartRate
+    - IHProgressHUD
     - IQKeyboardManager
-    - SSZipArchive
+    - SnapKit
 
 SPEC CHECKSUMS:
+  APIHeartRate: 24b9125d9c70698c9a26e8c99bbbbb0139f4983c
+  IHProgressHUD: a01846bfbb581c761c79747c67b08387c3bdfae3
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
-  SSZipArchive: 8c197761d66bd33e7f8b5b51ee57dff303971150
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: 2baf3d579e7fd93ddb7955566ad3325f1de38325
+PODFILE CHECKSUM: d43ed7fb57f32b499fb9520efa8ccad844e0dc40
 
 COCOAPODS: 1.11.2
