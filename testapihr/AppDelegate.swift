@@ -6,9 +6,9 @@
 //
 
 import UIKit
-
+import APIHeartRate
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, APIHeartRateObserver {
 
     var window: UIWindow?
 
@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-
 
 }
 

@@ -5,12 +5,12 @@
 //  Created by Tek on 2023/1/6.
 //
 
-import APIHeartRate
 import IHProgressHUD
 import SnapKit
 import SSZipArchive
 import SwiftXLSX
 import UIKit
+import APIHeartRate
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIHeartRateObserver {
     
     static let CONNECTED_KEY = "contected_device"

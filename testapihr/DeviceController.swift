@@ -5,9 +5,10 @@
 //  Created by Tek on 2023/1/12.
 //
 
-import APIHeartRate
+
 import IHProgressHUD
 import UIKit
+import APIHeartRate
 class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, APIHeartRateObserver {
  
 
