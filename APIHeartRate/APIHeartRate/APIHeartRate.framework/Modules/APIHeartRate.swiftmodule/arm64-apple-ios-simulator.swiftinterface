@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name APIHeartRate
+// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name APIHeartRate
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreBluetooth
 import Foundation
@@ -117,7 +117,7 @@ public struct HRInfo {
   public let time: Swift.String
   public let rateStr: Swift.String
 }
-public protocol APIHeartRateObserver {
+public protocol APIHeartRateObserver : ObjectiveC.NSObjectProtocol {
   func devicePower(power: Swift.String, device: APIHeartRate.BleDevice)
   func deviceFirmware(version: Swift.String, device: APIHeartRate.BleDevice)
   func deviceHardware(version: Swift.String, device: APIHeartRate.BleDevice)

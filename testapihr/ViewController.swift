@@ -80,6 +80,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         btn.isEnabled = false
         return btn
     }()
+    lazy var stopBtn: TestBtn = {
+        let btn = TestBtn(frame: CGRect.zero, title: "停止扫描") { [weak self] _ in
+            self?.stopScan()
+        }
+        return btn
+    }()
 
     var bgColor = UIColor(red: 241 / 255.0, green: 241 / 255.0, blue: 241 / 255.0, alpha: 1)
     override func viewDidLoad() {
@@ -94,6 +100,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         view.addSubview(txtFied2)
         view.addSubview(exportBtn)
         view.addSubview(clearBtn)
+        view.addSubview(stopBtn)
         tableView.snp.makeConstraints { make in
             make.topMargin.equalTo(10)
             make.width.equalToSuperview()
@@ -131,6 +138,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             make.left.equalTo(exportBtn.snp.right).offset(30)
             make.size.equalTo(CGSizeMake(140, 50))
         }
+        stopBtn.snp.makeConstraints { make in
+            make.top.equalTo(exportBtn.snp.bottom).offset(30)
+            make.left.equalTo(exportBtn.snp.left)
+            make.size.equalTo(CGSizeMake(140, 50))
+        }
         if let ud = UserDefaults.standard.object(forKey: ViewController.CONNECTED_KEY) as? [String] {
             for str in ud {
                 if let uuid = UUID(uuidString: str) {
@@ -145,12 +157,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
         }
         scanBtn.isEnabled = false
-        IHProgressHUD.show()
-        apiManager.startScan()
+        //IHProgressHUD.show()
+        apiManager.startScan(timeOut: 10)
         if cntUUID.isEmpty {
             return
         }
         dataPaired = apiManager.getPairedDevices(uuid: cntUUID)
+    }
+    
+    func stopScan() {
+        apiManager.stopScan()
     }
 
     func clearRateRecord() {
@@ -226,16 +242,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         IHProgressHUD.show(withStatus: "deviceId有误")
     }
 
-    func didDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice]) {
-        print("found device: \(discovery)")
+    func didDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice]) {
+        print("found device: \(devices)")
     }
 
-    func didFinishDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice]) {
+    func didFinishDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice]) {
         IHProgressHUD.dismiss()
         scanBtn.isEnabled = true
         isScaning = false
-        print("found device: \(discovery)")
-        dataRow = discovery
+        print("found device: \(devices)")
+        dataRow = devices
 //        if (dataPaired.count > 0) {
 //            for dev in dataRow {
 //                for pd in dataPaired {
@@ -265,7 +281,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let model = dataRow[indexPath.row]
+        
+        let model = indexPath.section == 0 ? dataRow[indexPath.row] : dataPaired[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as? DeviceCell {
             if connectMac == model.macAddress {
                 cell.txtLbl.textColor = .green

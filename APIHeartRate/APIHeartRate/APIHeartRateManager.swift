@@ -30,9 +30,17 @@ public class APIHeartRateManager {
 
     /**
      开始扫描
+     - parameter timeOut 超时时间 默认0表示无时间限制 单位秒
      */
-    public func startScan() {
-        repo.startScan()
+    public func startScan(timeOut: Double = 0) {
+        repo.startScan(timeOut: timeOut)
+    }
+    
+    /**
+     停止扫描
+     */
+    public func stopScan() {
+        repo.stopScan()
     }
     
     /**

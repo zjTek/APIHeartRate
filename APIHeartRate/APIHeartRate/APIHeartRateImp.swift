@@ -60,10 +60,10 @@ class APIHeartRateImp: HRRemotePeripheralDelegate, HRRemotePeerDelegate, HRRepos
         }
     }
 
-    func startScan() {
-        central.scanWithDuration { [weak self] newDiscoveries in
+    func startScan(timeOut: Double) {
+        central.scanWithDuration(timeOut) { [weak self] newDiscoveries in
             self?.observers.forEach({ _, delegateApi in
-                delegateApi.didDiscoveryWith(discovery: newDiscoveries)
+                delegateApi.didDiscoveryWith(devices: newDiscoveries)
             })
         } completionHandler: { [weak self] result, scanError in
             self?.observers.forEach({ _, delegateApi in
@@ -72,8 +72,12 @@ class APIHeartRateImp: HRRemotePeripheralDelegate, HRRemotePeerDelegate, HRRepos
                     delegateApi.bleConnectError(error: err, device: nil)
                     return
                 }
-                delegateApi.didFinishDiscoveryWith(discovery: res) })
+                delegateApi.didFinishDiscoveryWith(devices: res) })
         }
+    }
+    
+    func stopScan() {
+        central.endScan()
     }
 
     func getConnectedDevice(uuid: [UUID]) -> [BleDicoveryDevice] {
@@ -81,7 +85,7 @@ class APIHeartRateImp: HRRemotePeripheralDelegate, HRRemotePeerDelegate, HRRepos
         guard let remotes = ret else { return [] }
         var temp: [BleDicoveryDevice] = []
         for item in remotes {
-            temp.append(BleDicoveryDevice(advertisementData: [:], remotePeripheral: item, RSSI: 90, macAddress: item.macAddress))
+            temp.append(BleDicoveryDevice(advertisementData: [:], remotePeripheral: item, RSSI: 90, macAddress: item.macAddress, name: item.name))
         }
         return temp
     }
@@ -128,6 +132,8 @@ class APIHeartRateImp: HRRemotePeripheralDelegate, HRRemotePeerDelegate, HRRepos
                 delegateApi.bleConnectError(error: .deviceNotFound, device: nil) })
             return
         }
+        observers.forEach({ _, delegateApi in
+            delegateApi.bleConnectStatus(status: .disconnecting, device: remotePeripheral) })
         do {
             try central.disconnectRemotePeripheral(remote)
         } catch let e {

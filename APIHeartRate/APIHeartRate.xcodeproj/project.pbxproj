@@ -6,6 +6,31 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		BB6BA0202988ECF8004E7014 /* script */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BB6BA0212988ECF8004E7014 /* Build configuration list for PBXAggregateTarget "script" */;
+			buildPhases = (
+				BB6BA0242988ED10004E7014 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = script;
+			productName = script;
+		};
+		BB6BA037298912C4004E7014 /* xcframework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BB6BA03A298912C4004E7014 /* Build configuration list for PBXAggregateTarget "xcframework" */;
+			buildPhases = (
+				BB6BA03B298912C9004E7014 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = xcframework;
+			productName = xcframework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		BBB531C62967EFC9005757CA /* APIHeartRate.docc in Sources */ = {isa = PBXBuildFile; fileRef = BBB531C52967EFC9005757CA /* APIHeartRate.docc */; };
 		BBB531C72967EFC9005757CA /* APIHeartRate.h in Headers */ = {isa = PBXBuildFile; fileRef = BBB531C42967EFC9005757CA /* APIHeartRate.h */; };
@@ -175,6 +200,12 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					BB6BA0202988ECF8004E7014 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					BB6BA037298912C4004E7014 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
 					BBB531C02967EFC9005757CA = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -194,6 +225,8 @@
 			projectRoot = "";
 			targets = (
 				BBB531C02967EFC9005757CA /* APIHeartRate */,
+				BB6BA0202988ECF8004E7014 /* script */,
+				BB6BA037298912C4004E7014 /* xcframework */,
 			);
 		};
 /* End PBXProject section */
@@ -207,6 +240,43 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BB6BA0242988ED10004E7014 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n#要build的target名\nTARGET_NAME=${PROJECT_NAME}\nif [[ $1 ]]\nthen\nTARGET_NAME=$1\nfi\nUNIVERSAL_OUTPUT_FOLDER=\"${SRCROOT}/${PROJECT_NAME}/\"\n\n#创建输出目录，并删除之前的framework文件\nmkdir -p \"${UNIVERSAL_OUTPUT_FOLDER}\"\nrm -rf \"${UNIVERSAL_OUTPUT_FOLDER}/${TARGET_NAME}.framework\"\n\n#分别编译模拟器和真机的Framework\nxcodebuild -target \"${TARGET_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"${TARGET_NAME}\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphonesimulator BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n\n#拷贝framework到univer目录\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}.framework\" \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\nlipo \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}.framework/${TARGET_NAME}\" -remove arm64 -output \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}.framework/${TARGET_NAME}\"\n\n\n#合并framework，输出最终的framework到build目录\nlipo -create -output \"${UNIVERSAL_OUTPUT_FOLDER}/${TARGET_NAME}.framework/${TARGET_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/${TARGET_NAME}.framework/${TARGET_NAME}\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/${TARGET_NAME}.framework/${TARGET_NAME}\"\n\n#删除编译之后生成的无关的配置文件\ndir_path=\"${UNIVERSAL_OUTPUT_FOLDER}/${TARGET_NAME}.framework/\"\nfor file in ls $dir_path\ndo\nif [[ ${file} =~ \".xcconfig\" ]]\nthen\nrm -f \"${dir_path}/${file}\"\nfi\ndone\n#判断build文件夹是否存在，存在则删除\nif [ -d \"${SRCROOT}/build\" ]\nthen\nrm -rf \"${SRCROOT}/build\"\nfi\nrm -rf \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos\"\n#打开合并后的文件夹\nopen \"${UNIVERSAL_OUTPUT_FOLDER}\"\n\n\n";
+		};
+		BB6BA03B298912C9004E7014 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#判断build文件夹是否存在，存在则删除\nif [ -d \"./archive\" ]\nthen\nrm -rf \"./archive\"\nfi\n\nxcodebuild archive \\\n-scheme APIHeartRate \\\n-sdk iphonesimulator \\\n-archivePath \"./archives/ios_simulators.xcarchive\" \\\nBUILD_LIBRAY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO\n\nxcodebuild archive \\\n-scheme APIHeartRate \\\n-sdk iphoneos \\\n-archivePath \"./archives/ios_devices.xcarchive\" \\\nBUILD_LIBRAY_FOR_DISTRIBUTION=YES \\\nSKIP_INSTALL=NO\n\nxcodebuild -create-xcframework \\\n-framework ./archives/ios_devices.xcarchive/Products/Library/Frameworks/APIHeartRate.framework \\\n-framework ./archives/ios_simulators.xcarchive/Products/Library/Frameworks/APIHeartRate.framework \\\n-output archives/APIHeartRate.xcframework\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BBB531BD2967EFC9005757CA /* Sources */ = {
@@ -247,6 +317,42 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		BB6BA0222988ECF8004E7014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KE6K9E8UN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB6BA0232988ECF8004E7014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KE6K9E8UN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BB6BA038298912C4004E7014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KE6K9E8UN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB6BA039298912C4004E7014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9KE6K9E8UN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		BBB531C82967EFC9005757CA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -440,6 +546,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB6BA0212988ECF8004E7014 /* Build configuration list for PBXAggregateTarget "script" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6BA0222988ECF8004E7014 /* Debug */,
+				BB6BA0232988ECF8004E7014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB6BA03A298912C4004E7014 /* Build configuration list for PBXAggregateTarget "xcframework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6BA038298912C4004E7014 /* Debug */,
+				BB6BA039298912C4004E7014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BBB531BB2967EFC9005757CA /* Build configuration list for PBXProject "APIHeartRate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

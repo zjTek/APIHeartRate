@@ -37,6 +37,7 @@ internal class HRScanner: HRCBCentralManagerDiscoveryDelegate {
         case noCentralManagerSet
         case busy
         case interrupted
+        case endByUser
     }
 
     // MARK: Properties
@@ -86,7 +87,7 @@ internal class HRScanner: HRCBCentralManagerDiscoveryDelegate {
         endScan(nil)
     }
 
-    private func endScan(_ error: HRError?) {
+    public func endScan(_ error: HRError?) {
         invalidateTimer()
         centralManager.stopScan()
         let completionHandler = scanHandlers?.completionHandler
@@ -117,13 +118,14 @@ internal class HRScanner: HRCBCentralManagerDiscoveryDelegate {
         let RSSI = Int(truncating: RSSI)
         let remotePeripheral = BleDevice(identifier: peripheral.identifier, peripheral: peripheral)
         remotePeripheral.macAddress = macStr
-        let discovery = BleDicoveryDevice(advertisementData: advertisementData, remotePeripheral: remotePeripheral, RSSI: RSSI, macAddress: macStr)
+        let nameStr = advertisementData[CBAdvertisementDataLocalNameKey] as? String
+        var discovery = BleDicoveryDevice(advertisementData: advertisementData, remotePeripheral: remotePeripheral, RSSI: RSSI, macAddress: macStr, name: nameStr)
         if let index = discoveries.firstIndex(of: discovery) {
             discoveries[index] = discovery
         } else {
             discoveries.append(discovery)
         }
-        scanHandlers?.progressHandler?([ discovery ])
+        scanHandlers?.progressHandler?(discoveries)
     }
     
     internal func notTargetDevice(adv: [String: Any]) -> String? {

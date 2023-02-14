@@ -2034,6 +2034,26 @@
           },
           {
             "kind": "Function",
+            "name": "endScan",
+            "printedName": "endScan()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate9HRCentralC7endScanyyF",
+            "mangledName": "$s12APIHeartRate9HRCentralC7endScanyyF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "scanContinuouslyWithChangeHandler",
             "printedName": "scanContinuouslyWithChangeHandler(_:stateHandler:duration:inBetweenDelay:updateDuplicates:errorHandler:)",
             "children": [
@@ -3368,6 +3388,43 @@
           },
           {
             "kind": "Var",
+            "name": "disconnecting",
+            "printedName": "disconnecting",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.DeviceBleStatus.Type) -> APIHeartRate.DeviceBleStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DeviceBleStatus",
+                    "printedName": "APIHeartRate.DeviceBleStatus",
+                    "usr": "s:12APIHeartRate15DeviceBleStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.DeviceBleStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeviceBleStatus",
+                        "printedName": "APIHeartRate.DeviceBleStatus",
+                        "usr": "s:12APIHeartRate15DeviceBleStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate15DeviceBleStatusO13disconnectingyA2CmF",
+            "mangledName": "$s12APIHeartRate15DeviceBleStatusO13disconnectingyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Var",
             "name": "disconnected",
             "printedName": "disconnected",
             "children": [
@@ -4442,7 +4499,7 @@
           {
             "kind": "Function",
             "name": "didDiscoveryWith",
-            "printedName": "didDiscoveryWith(discovery:)",
+            "printedName": "didDiscoveryWith(devices:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4465,8 +4522,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB8ObserverP16didDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
-            "mangledName": "$s12APIHeartRate0aB8ObserverP16didDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
+            "usr": "s:12APIHeartRate0aB8ObserverP16didDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP16didDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -4477,7 +4534,7 @@
           {
             "kind": "Function",
             "name": "didFinishDiscoveryWith",
-            "printedName": "didFinishDiscoveryWith(discovery:)",
+            "printedName": "didFinishDiscoveryWith(devices:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4500,8 +4557,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB8ObserverP22didFinishDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
-            "mangledName": "$s12APIHeartRate0aB8ObserverP22didFinishDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
+            "usr": "s:12APIHeartRate0aB8ObserverP22didFinishDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP22didFinishDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -5340,7 +5397,7 @@
           {
             "kind": "Function",
             "name": "didDiscoveryWith",
-            "printedName": "didDiscoveryWith(discovery:)",
+            "printedName": "didDiscoveryWith(devices:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5363,8 +5420,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB8ObserverPAAE16didDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
-            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE16didDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE16didDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE16didDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -5374,7 +5431,7 @@
           {
             "kind": "Function",
             "name": "didFinishDiscoveryWith",
-            "printedName": "didFinishDiscoveryWith(discovery:)",
+            "printedName": "didFinishDiscoveryWith(devices:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5397,8 +5454,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB8ObserverPAAE22didFinishDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
-            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE22didFinishDiscoveryWith9discoveryySayAA17BleDicoveryDeviceVG_tF",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE22didFinishDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE22didFinishDiscoveryWith7devicesySayAA17BleDicoveryDeviceVG_tF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -5661,7 +5718,35 @@
           {
             "kind": "Function",
             "name": "startScan",
-            "printedName": "startScan()",
+            "printedName": "startScan(timeOut:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "hasDefaultArg": true,
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC9startScan7timeOutySd_tF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC9startScan7timeOutySd_tF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "stopScan",
+            "printedName": "stopScan()",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5670,8 +5755,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB7ManagerC9startScanyyF",
-            "mangledName": "$s12APIHeartRate0aB7ManagerC9startScanyyF",
+            "usr": "s:12APIHeartRate0aB7ManagerC8stopScanyyF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC8stopScanyyF",
             "moduleName": "APIHeartRate",
             "declAttributes": [
               "AccessControl",
@@ -8084,27 +8169,21 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "Swift.String?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "String",
-                    "printedName": "Swift.String",
-                    "usr": "s:SS"
-                  }
-                ],
-                "usr": "s:Sq"
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
               }
             ],
             "declKind": "Var",
-            "usr": "s:12APIHeartRate17BleDicoveryDeviceV9localNameSSSgvp",
-            "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV9localNameSSSgvp",
+            "usr": "s:12APIHeartRate17BleDicoveryDeviceV9localNameSSvp",
+            "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV9localNameSSvp",
             "moduleName": "APIHeartRate",
             "declAttributes": [
+              "HasStorage",
               "AccessControl",
               "RawDocComment"
             ],
+            "hasStorage": true,
             "accessors": [
               {
                 "kind": "Accessor",
@@ -8113,24 +8192,59 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "Swift.String?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "String",
-                        "printedName": "Swift.String",
-                        "usr": "s:SS"
-                      }
-                    ],
-                    "usr": "s:Sq"
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12APIHeartRate17BleDicoveryDeviceV9localNameSSSgvg",
-                "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV9localNameSSSgvg",
+                "usr": "s:12APIHeartRate17BleDicoveryDeviceV9localNameSSvg",
+                "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV9localNameSSvg",
                 "moduleName": "APIHeartRate",
+                "implicit": true,
                 "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12APIHeartRate17BleDicoveryDeviceV9localNameSSvs",
+                "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV9localNameSSvs",
+                "moduleName": "APIHeartRate",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12APIHeartRate17BleDicoveryDeviceV9localNameSSvM",
+                "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV9localNameSSvM",
+                "moduleName": "APIHeartRate",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -8386,7 +8500,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(advertisementData:remotePeripheral:RSSI:macAddress:)",
+            "printedName": "init(advertisementData:remotePeripheral:RSSI:macAddress:name:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8430,11 +8544,25 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:12APIHeartRate17BleDicoveryDeviceV17advertisementData16remotePeripheral4RSSI10macAddressACSDySSypG_AA0cE0CSiSStcfc",
-            "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV17advertisementData16remotePeripheral4RSSI10macAddressACSDySSypG_AA0cE0CSiSStcfc",
+            "usr": "s:12APIHeartRate17BleDicoveryDeviceV17advertisementData16remotePeripheral4RSSI10macAddress4nameACSDySSypG_AA0cE0CSiS2SSgtcfc",
+            "mangledName": "$s12APIHeartRate17BleDicoveryDeviceV17advertisementData16remotePeripheral4RSSI10macAddress4nameACSDySSypG_AA0cE0CSiS2SSgtcfc",
             "moduleName": "APIHeartRate",
             "declAttributes": [
               "AccessControl",
@@ -9070,7 +9198,7 @@
       "kind": "IntegerLiteral",
       "offset": 5663,
       "length": 1,
-      "value": "3"
+      "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRCentral.swift",
@@ -9082,28 +9210,28 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRCentral.swift",
       "kind": "IntegerLiteral",
-      "offset": 7653,
+      "offset": 7728,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRCentral.swift",
       "kind": "IntegerLiteral",
-      "offset": 7687,
+      "offset": 7762,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRCentral.swift",
       "kind": "BooleanLiteral",
-      "offset": 7715,
+      "offset": 7790,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRCentral.swift",
       "kind": "IntegerLiteral",
-      "offset": 9074,
+      "offset": 9149,
       "length": 1,
       "value": "3"
     },
@@ -9138,7 +9266,7 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateObserver.swift",
       "kind": "StringLiteral",
-      "offset": 605,
+      "offset": 628,
       "length": 21,
       "value": "\"yyyy-mm-dd HH:mm:ss\""
     },
@@ -9157,6 +9285,13 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 826,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRCBPeripheralManagerDelegateProxy.swift",
       "kind": "StringLiteral",
       "offset": 2086,
@@ -9166,7 +9301,7 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRScanner.swift",
       "kind": "BooleanLiteral",
-      "offset": 1676,
+      "offset": 1699,
       "length": 5,
       "value": "false"
     },
@@ -9355,7 +9490,7 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
       "kind": "IntegerLiteral",
-      "offset": 5800,
+      "offset": 6036,
       "length": 1,
       "value": "0"
     },

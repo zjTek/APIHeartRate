@@ -137,7 +137,7 @@ public class HRCentral: HRPeer, HRCBCentralManagerStateDelegate, HRConnectionPoo
         - parameter progressHandler: A progress handler allowing you to react immediately when a peripheral is discovered during a scan.
         - parameter completionHandler: A completion handler allowing you to react on the full result of discovered peripherals or an error if one occured.
     */
-    public func scanWithDuration(_ duration: TimeInterval = 3, updateDuplicates: Bool = false, progressHandler: ScanProgressHandler?, completionHandler: ScanCompletionHandler?) {
+    public func scanWithDuration(_ duration: TimeInterval = 0, updateDuplicates: Bool = false, progressHandler: ScanProgressHandler?, completionHandler: ScanCompletionHandler?) {
         do {
             try stateMachine.handleEvent(.scan)
             try scanner.scanWithDuration(duration, updateDuplicates: updateDuplicates, progressHandler: progressHandler) { result, error in
@@ -153,6 +153,10 @@ public class HRCentral: HRPeer, HRCBCentralManagerStateDelegate, HRConnectionPoo
             completionHandler?(nil, .internalError(underlyingError: error))
             return
         }
+    }
+    
+    public func endScan() {
+        scanner.endScan(.endByUser)
     }
 
     /**

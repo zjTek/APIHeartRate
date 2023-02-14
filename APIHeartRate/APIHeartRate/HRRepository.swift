@@ -9,7 +9,7 @@
 import Foundation
 
 protocol HRRepository {
-    func startScan()
+    func startScan(timeOut: Double)
     func getConnectedDevice(uuid:[UUID]) -> [BleDicoveryDevice]
     func connectBluetooth(device: BleDicoveryDevice)
     func connectDeviceBy(deviceId: String)

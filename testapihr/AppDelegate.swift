@@ -8,7 +8,7 @@
 import UIKit
 import APIHeartRate
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, APIHeartRateObserver {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 

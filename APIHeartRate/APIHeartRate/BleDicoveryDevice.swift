@@ -13,9 +13,7 @@ public struct BleDicoveryDevice: Equatable {
     // MARK: Properties
 
     /// The advertised name derived from the advertisement data.
-    public var localName: String? {
-        return advertisementData[CBAdvertisementDataLocalNameKey] as? String
-    }
+    public let localName: String
 
     /// The data advertised while the discovery was made.
     public let advertisementData: [String: Any]
@@ -31,12 +29,13 @@ public struct BleDicoveryDevice: Equatable {
     public let deviceId: String
     // MARK: Initialization
 
-    public init(advertisementData: [String: Any], remotePeripheral: BleDevice, RSSI: Int, macAddress:String) {
+    public init(advertisementData: [String: Any], remotePeripheral: BleDevice, RSSI: Int, macAddress:String, name: String?) {
         self.advertisementData = advertisementData
         self.remotePeripheral = remotePeripheral
         self.RSSI = RSSI
         self.macAddress = macAddress
         self.deviceId = remotePeripheral.identifier.uuidString
+        self.localName = name ?? ""
     }
 
 }

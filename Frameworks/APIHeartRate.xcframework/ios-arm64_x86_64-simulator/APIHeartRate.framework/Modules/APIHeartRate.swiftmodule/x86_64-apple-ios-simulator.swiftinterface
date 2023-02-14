@@ -69,7 +69,8 @@ public protocol HRCentralDelegate : AnyObject {
   public var availabilityObservers: [APIHeartRate.HRWeakAvailabilityObserver]
   public init()
   public func startWithConfiguration() throws
-  public func scanWithDuration(_ duration: Foundation.TimeInterval = 3, updateDuplicates: Swift.Bool = false, progressHandler: APIHeartRate.HRCentral.ScanProgressHandler?, completionHandler: APIHeartRate.HRCentral.ScanCompletionHandler?)
+  public func scanWithDuration(_ duration: Foundation.TimeInterval = 0, updateDuplicates: Swift.Bool = false, progressHandler: APIHeartRate.HRCentral.ScanProgressHandler?, completionHandler: APIHeartRate.HRCentral.ScanCompletionHandler?)
+  public func endScan()
   public func scanContinuouslyWithChangeHandler(_ changeHandler: @escaping APIHeartRate.HRCentral.ContinuousScanChangeHandler, stateHandler: APIHeartRate.HRCentral.ContinuousScanStateHandler?, duration: Foundation.TimeInterval = 3, inBetweenDelay: Foundation.TimeInterval = 3, updateDuplicates: Swift.Bool = false, errorHandler: APIHeartRate.HRCentral.ContinuousScanErrorHandler?)
   public func interruptScan()
   public func connect(_ timeout: Foundation.TimeInterval = 3, remotePeripheral: APIHeartRate.BleDevice, completionHandler: @escaping APIHeartRate.HRCentral.ConnectCompletionHandler)
@@ -104,6 +105,7 @@ public enum BleConnectError : Swift.Error {
 public enum DeviceBleStatus {
   case connecting
   case connected
+  case disconnecting
   case disconnected
   public static func == (a: APIHeartRate.DeviceBleStatus, b: APIHeartRate.DeviceBleStatus) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
@@ -140,8 +142,8 @@ public protocol APIHeartRateObserver {
   func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
-  func didDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice])
-  func didFinishDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice])
+  func didDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice])
+  func didFinishDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice])
   func bleCommonError(error: APIHeartRate.BleCommonError)
   func bleAvailability(status: APIHeartRate.BleAvailability)
 }
@@ -168,8 +170,8 @@ extension APIHeartRate.APIHeartRateObserver {
   public func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   public func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   public func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
-  public func didDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice])
-  public func didFinishDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice])
+  public func didDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice])
+  public func didFinishDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice])
   public func bleCommonError(error: APIHeartRate.BleCommonError)
   public func bleAvailability(status: APIHeartRate.BleAvailability)
 }
@@ -180,7 +182,8 @@ extension APIHeartRate.APIHeartRateObserver {
   public static let instance: APIHeartRate.APIHeartRateManager
   public func addObserver(observer: APIHeartRate.APIHeartRateObserver)
   public func removeObserver(observer: APIHeartRate.APIHeartRateObserver)
-  public func startScan()
+  public func startScan(timeOut: Swift.Double = 0)
+  public func stopScan()
   public func getPairedDevices(uuid: [Foundation.UUID]) -> [APIHeartRate.BleDicoveryDevice]
   public func connectToDeviceByDeviceId(deviceId: Swift.String)
   public func connectToDevice(device: APIHeartRate.BleDicoveryDevice)
@@ -271,15 +274,13 @@ public func == (lhs: APIHeartRate.HRRemotePeer, rhs: APIHeartRate.HRRemotePeer) 
 }
 public func == (lhs: APIHeartRate.BleDicoveryDevice, rhs: APIHeartRate.BleDicoveryDevice) -> Swift.Bool
 public struct BleDicoveryDevice : Swift.Equatable {
-  public var localName: Swift.String? {
-    get
-  }
+  public var localName: Swift.String
   public let advertisementData: [Swift.String : Any]
   public let remotePeripheral: APIHeartRate.BleDevice
   public let RSSI: Swift.Int
   public let macAddress: Swift.String
   public let deviceId: Swift.String
-  public init(advertisementData: [Swift.String : Any], remotePeripheral: APIHeartRate.BleDevice, RSSI: Swift.Int, macAddress: Swift.String)
+  public init(advertisementData: [Swift.String : Any], remotePeripheral: APIHeartRate.BleDevice, RSSI: Swift.Int, macAddress: Swift.String, name: Swift.String?)
 }
 public protocol HRPeripheralDelegate : AnyObject {
   func peripheral(_ peripheral: APIHeartRate.HRPeripheral, remoteCentralDidConnect remoteCentral: APIHeartRate.HRRemoteCentral)

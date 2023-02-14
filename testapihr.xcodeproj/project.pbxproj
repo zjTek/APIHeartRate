@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		58EF161EC545739E31CAD33A /* Pods_testapihr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7B02A17D6234AFFB831C2 /* Pods_testapihr.framework */; };
-		BB6BA0412989164C004E7014 /* APIHeartRate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB6BA0402989164B004E7014 /* APIHeartRate.xcframework */; };
-		BB6BA0422989164C004E7014 /* APIHeartRate.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB6BA0402989164B004E7014 /* APIHeartRate.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB7CAE1C299B9F2500AC7F68 /* APIHeartRate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB7CAE1B299B9F2400AC7F68 /* APIHeartRate.xcframework */; };
+		BB7CAE1D299B9F2500AC7F68 /* APIHeartRate.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB7CAE1B299B9F2400AC7F68 /* APIHeartRate.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BB8F45B7299B905800F4F965 /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = BB8F45B6299B905800F4F965 /* SwiftXLSX */; };
 		BBB35DEE296FFD7B00C63B7E /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB35DED296FFD7B00C63B7E /* DeviceController.swift */; };
 		BBB35DF12970065100C63B7E /* IHProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BBB35DF02970065100C63B7E /* IHProgressHUD */; };
 		BBB35DF42970070100C63B7E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBB35DF32970070100C63B7E /* SnapKit */; };
 		BBB35DF8297010B700C63B7E /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB35DF7297010B700C63B7E /* DeviceCell.swift */; };
-		BBB35DFC2970272E00C63B7E /* SwiftXLSX in Frameworks */ = {isa = PBXBuildFile; productRef = BBB35DFB2970272E00C63B7E /* SwiftXLSX */; };
 		BBB5320C296801B1005757CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5320B296801B1005757CA /* AppDelegate.swift */; };
 		BBB53210296801B1005757CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5320F296801B1005757CA /* ViewController.swift */; };
 		BBB53213296801B1005757CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB53211296801B1005757CA /* Main.storyboard */; };
@@ -26,13 +26,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		BB6BA0432989164C004E7014 /* Embed Frameworks */ = {
+		BB7CAE1E299B9F2500AC7F68 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BB6BA0422989164C004E7014 /* APIHeartRate.xcframework in Embed Frameworks */,
+				BB7CAE1D299B9F2500AC7F68 /* APIHeartRate.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,9 +43,10 @@
 		01A7B02A17D6234AFFB831C2 /* Pods_testapihr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_testapihr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2ECEDD565B31ED645D39DF /* Pods-testapihr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapihr.debug.xcconfig"; path = "Target Support Files/Pods-testapihr/Pods-testapihr.debug.xcconfig"; sourceTree = "<group>"; };
 		87DA700608CF60718B433ABC /* Pods-testapihr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapihr.release.xcconfig"; path = "Target Support Files/Pods-testapihr/Pods-testapihr.release.xcconfig"; sourceTree = "<group>"; };
-		BB6BA0402989164B004E7014 /* APIHeartRate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = APIHeartRate.xcframework; path = testapihr/APIHeartRate.xcframework; sourceTree = "<group>"; };
+		BB7CAE18299B94A300AC7F68 /* APIHeartRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = APIHeartRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB7CAE1B299B9F2400AC7F68 /* APIHeartRate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = APIHeartRate.xcframework; path = ../../bands/APIHeartRate/archives/APIHeartRate.xcframework; sourceTree = "<group>"; };
+		BB8F45B5299B902B00F4F965 /* SwiftXLSX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftXLSX; path = ../../bands/SwiftXLSX; sourceTree = "<group>"; };
 		BBB35DED296FFD7B00C63B7E /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
-		BBB35DF629700C7800C63B7E /* SwiftXLSX */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = SwiftXLSX; path = ../../sourcecodes/SwiftXLSX; sourceTree = "<group>"; };
 		BBB35DF7297010B700C63B7E /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		BBB53208296801B1005757CA /* testapihr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapihr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB5320B296801B1005757CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,10 +66,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				58EF161EC545739E31CAD33A /* Pods_testapihr.framework in Frameworks */,
-				BBB35DFC2970272E00C63B7E /* SwiftXLSX in Frameworks */,
 				BBB35DF42970070100C63B7E /* SnapKit in Frameworks */,
 				BBB35DF12970065100C63B7E /* IHProgressHUD in Frameworks */,
-				BB6BA0412989164C004E7014 /* APIHeartRate.xcframework in Frameworks */,
+				BB8F45B7299B905800F4F965 /* SwiftXLSX in Frameworks */,
+				BB7CAE1C299B9F2500AC7F68 /* APIHeartRate.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +79,8 @@
 		0B0F0C7F0FBA925FA79E1C4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BB6BA0402989164B004E7014 /* APIHeartRate.xcframework */,
+				BB7CAE1B299B9F2400AC7F68 /* APIHeartRate.xcframework */,
+				BB7CAE18299B94A300AC7F68 /* APIHeartRate.framework */,
 				01A7B02A17D6234AFFB831C2 /* Pods_testapihr.framework */,
 			);
 			name = Frameworks;
@@ -87,7 +89,7 @@
 		BBB35DF529700C7800C63B7E /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				BBB35DF629700C7800C63B7E /* SwiftXLSX */,
+				BB8F45B5299B902B00F4F965 /* SwiftXLSX */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -150,7 +152,7 @@
 				BBB53205296801B1005757CA /* Frameworks */,
 				BBB53206296801B1005757CA /* Resources */,
 				4FCE58E5B81EFC1E952A317C /* [CP] Embed Pods Frameworks */,
-				BB6BA0432989164C004E7014 /* Embed Frameworks */,
+				BB7CAE1E299B9F2500AC7F68 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,7 +162,7 @@
 			packageProductDependencies = (
 				BBB35DF02970065100C63B7E /* IHProgressHUD */,
 				BBB35DF32970070100C63B7E /* SnapKit */,
-				BBB35DFB2970272E00C63B7E /* SwiftXLSX */,
+				BB8F45B6299B905800F4F965 /* SwiftXLSX */,
 			);
 			productName = testapihr;
 			productReference = BBB53208296801B1005757CA /* testapihr.app */;
@@ -524,6 +526,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		BB8F45B6299B905800F4F965 /* SwiftXLSX */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftXLSX;
+		};
 		BBB35DF02970065100C63B7E /* IHProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BBB35DEF2970065100C63B7E /* XCRemoteSwiftPackageReference "IHProgressHUD" */;
@@ -533,10 +539,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BBB35DF22970070100C63B7E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		BBB35DFB2970272E00C63B7E /* SwiftXLSX */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = SwiftXLSX;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
