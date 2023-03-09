@@ -101,6 +101,8 @@ apiManager.getModelName()
 | 主动读特征            |   readCharValue(charUUID: String)                         |     ✅  | 
 | 主动设置特征监听      |   setCharNotify(charUUID: String, enabled: Bool)            |     ✅  | 
 | 主动写特征           |   writeChar(charUUID: String, data:Data)                   |     ✅  | 
+| 获取历史数据           |   ------                                    |     ❌  | 
+| 设置心率区间          |   -------------                            |     ❌  | 
 
 
 
