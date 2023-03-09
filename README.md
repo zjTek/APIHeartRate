@@ -75,6 +75,34 @@ apiManager.getModelName()
 ....
 ```
 
+#### 接口列表
+| 功能名称        | 方法    |  支持状态  |
+| --------          | -----:   | :----: |
+| 扫描设备        | startScan()                                               |      ✅    |
+| 获取已连接设备         |   getConnectedDevice(uuid:[UUID])                    |     ✅  | 
+| 通过device对象连接设备 |   connectBluetooth(device: BleDicoveryDevice)         |     ✅  | 
+| 通过deiceID连接设备   |   connectDeviceBy(deviceId: String)                   |     ✅  | 
+| 断开设备             |   disconnectDevice()                                   |     ✅  | 
+| 注册事件监听          |   registerBleListener(listener: APIHeartRateObserver)  |   ✅    |
+| 取消事件监听          |   unregisterBleListener(listener: APIHeartRateObserver)|     ✅  | 
+| 获取设备电量          |   getDeviceBattery()                                   |     ✅  | 
+| 获取厂商信息          |   getDeviceManufacturer()                               |     ✅  | 
+| 获取ModelNum         |   getDeviceModelNum()                                  |     ✅  | 
+| 获取硬件版本          |   getDeviceHardware()                                   |     ✅  | 
+| 获取软件版本          |   getDeviceSoftware()                                    |     ✅  | 
+| 获取固件版本          |   getDeviceFirmware()                                    |     ✅  | 
+| 获取系统ID           |   getDeviceSystemID()                                     |     ✅  | 
+| 设置心率最大阈值       |   setDeviceThreshold(max: UInt8)                         |     ✅  | 
+| 获取序列号            |  getDeviceSerial()                                       |     ❌  | 
+| 获取步频              |   getDeviceStepFrequency()                               |     ❌  | 
+| 获取实时血氧           |   getRealTimeOxygen()                                     |     ❌  | 
+| 同步时间              |   syncTime()                                              |     ✅  | 
+| 主动读特征            |   readCharValue(charUUID: String)                         |     ✅  | 
+| 主动设置特征监听      |   setCharNotify(charUUID: String, enabled: Bool)            |     ✅  | 
+| 主动写特征           |   writeChar(charUUID: String, data:Data)                   |     ✅  | 
+
+
+
 #### APIHeartRateObserver
 这个代理类返回所有错误和数据
 ```swift
