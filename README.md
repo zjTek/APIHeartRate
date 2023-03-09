@@ -78,7 +78,8 @@ apiManager.getModelName()
 #### 接口列表
 | 功能名称        | 方法    |  支持状态  |
 | --------          | -----:   | :----: |
-| 扫描设备        | startScan()                                               |      ✅    |
+| 扫描设备        | startScan(timeOut: Double)           |      ✅    |
+| 停止到扫描      | stopScan()                          |      ✅    |
 | 获取已连接设备         |   getConnectedDevice(uuid:[UUID])                    |     ✅  | 
 | 通过device对象连接设备 |   connectBluetooth(device: BleDicoveryDevice)         |     ✅  | 
 | 通过deiceID连接设备   |   connectDeviceBy(deviceId: String)                   |     ✅  | 
