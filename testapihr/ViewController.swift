@@ -362,7 +362,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     private func statOTA() {
-        if let binFile = Bundle.main.url(forResource: "syd8811_hid_FirmwareV1.3", withExtension: "bin")
+        if let binFile = Bundle.main.url(forResource: "syd8811_hid_FirmwareV1.2", withExtension: "bin")
          {
             do {
                 let d = try Data(contentsOf: binFile)

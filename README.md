@@ -100,11 +100,14 @@ apiManager.getModelName()
 | 同步时间              |   syncTime()                                              |     ✅  | 
 | 主动读特征            |   readCharValue(charUUID: String)                         |     ✅  | 
 | 主动设置特征监听      |   setCharNotify(charUUID: String, enabled: Bool)            |     ✅  | 
-| 主动写特征           |   writeChar(charUUID: String, data:Data)                   |     ✅  | 
-| 获取历史数据           |   ------                                    |     ❌  | 
-| 设置心率区间          |   -------------                            |     ❌  | 
-
-
+| 主动写特征           |   writeChar(charUUID: String, data:Data)                   |      ✅ | 
+| 获取历史数据           |   ------                                    |     ❌  |
+| <font color="red">Pod 0.0.7 </font>   |       |      |  
+| 设置心率区间         |  setHeartRateThreshold(min: UInt8, max: UInt8) |     ✅ | 
+| ota接口         |  startSendOTAFile(data: Data) 状态监听接口：bleOtaStauts(status: OtaStatus, progress: Float)；bleOtaError(error: OtaError)|     ✅ | 
+| 接收手环按钮切换值         | armBandPlayStatusChange（被动） |     ✅ | 
+| 长按5s接收解绑指令         | armBandUnbind（被动） |     ✅ | 
+| 恢复出厂设置         | resetBand() |     ❌ | 
 
 #### APIHeartRateObserver
 这个代理类返回所有错误和数据
