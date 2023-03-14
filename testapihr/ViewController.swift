@@ -5,14 +5,13 @@
 //  Created by Tek on 2023/1/6.
 //
 
+import APIHeartRate
 import IHProgressHUD
 import SnapKit
 import SSZipArchive
 import SwiftXLSX
 import UIKit
-import APIHeartRate
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIHeartRateObserver {
-    
     static let CONNECTED_KEY = "contected_device"
     var dataHeart: [HRInfo] = []
 
@@ -25,6 +24,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var isConnecting = false
     var connectMac = ""
     var cntUUID: [UUID] = []
+    var curTime = 0
     lazy var tableView: UITableView = {
         let table = UITableView(frame: CGRect.zero)
         table.delegate = self
@@ -80,19 +80,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         btn.isEnabled = false
         return btn
     }()
-    lazy var stopBtn: TestBtn = {
-        let btn = TestBtn(frame: CGRect.zero, title: "停止扫描") { [weak self] _ in
-            self?.stopScan()
+
+    lazy var lightBtn: UILabel = {
+        let bl = UILabel()
+        bl.text = "保持屏幕常亮"
+        return bl
+    }()
+
+    lazy var lightSwitch: UISwitch = {
+        let sw = UISwitch()
+        sw.isOn = false
+        sw.addTarget(self, action: #selector(switchChanged(sender:)), for: .valueChanged)
+        return sw
+    }()
+    
+    lazy var apiBtn: TestBtn = {
+        let btn = TestBtn(frame: CGRect.zero, title: "跳转API页面") { [weak self] _ in
+            self?.gotoDevice()
+        }
+        btn.isEnabled = false
+        return btn
+    }()
+    
+    lazy var otaBtn: TestBtn = {
+        let btn = TestBtn(frame: CGRect.zero, title: "开始OTA") { [weak self] _ in
+            self?.statOTA()
         }
         return btn
     }()
+    
 
     var bgColor = UIColor(red: 241 / 255.0, green: 241 / 255.0, blue: 241 / 255.0, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = bgColor
         apiManager.addObserver(observer: self)
-
+        
+        
         view.addSubview(tableView)
         view.addSubview(scanBtn)
         view.addSubview(disConBtn)
@@ -100,7 +124,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         view.addSubview(txtFied2)
         view.addSubview(exportBtn)
         view.addSubview(clearBtn)
-        view.addSubview(stopBtn)
+        view.addSubview(lightBtn)
+        view.addSubview(lightSwitch)
+        view.addSubview(apiBtn)
+        view.addSubview(otaBtn)
         tableView.snp.makeConstraints { make in
             make.topMargin.equalTo(10)
             make.width.equalToSuperview()
@@ -138,9 +165,22 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             make.left.equalTo(exportBtn.snp.right).offset(30)
             make.size.equalTo(CGSizeMake(140, 50))
         }
-        stopBtn.snp.makeConstraints { make in
-            make.top.equalTo(exportBtn.snp.bottom).offset(30)
-            make.left.equalTo(exportBtn.snp.left)
+        lightBtn.snp.makeConstraints { make in
+            make.top.equalTo(exportBtn.snp.bottomMargin).offset(50)
+            make.left.equalTo(exportBtn)
+        }
+        lightSwitch.snp.makeConstraints { make in
+            make.left.equalTo(lightBtn.snp.right).offset(30)
+            make.top.equalTo(lightBtn.snp.top)
+        }
+        apiBtn.snp.makeConstraints { make in
+            make.left.equalTo(lightSwitch.snp.right).offset(30)
+            make.top.equalTo(lightSwitch.snp.top)
+            make.size.equalTo(CGSizeMake(140, 50))
+        }
+        otaBtn.snp.makeConstraints { make in
+            make.left.equalTo(lightBtn).offset(30)
+            make.top.equalTo(lightBtn.snp.bottomMargin).offset(50)
             make.size.equalTo(CGSizeMake(140, 50))
         }
         if let ud = UserDefaults.standard.object(forKey: ViewController.CONNECTED_KEY) as? [String] {
@@ -157,16 +197,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return
         }
         scanBtn.isEnabled = false
-        //IHProgressHUD.show()
-        apiManager.startScan(timeOut: 10)
+        IHProgressHUD.show()
+        apiManager.startScan(timeOut: 3)
         if cntUUID.isEmpty {
             return
         }
         dataPaired = apiManager.getPairedDevices(uuid: cntUUID)
-    }
-    
-    func stopScan() {
-        apiManager.stopScan()
     }
 
     func clearRateRecord() {
@@ -181,6 +217,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             clearBtn.isEnabled = true
             exportBtn.isEnabled = true
         }
+    }
+
+    @objc
+    func switchChanged(sender: UISwitch) {
+        UIApplication.shared.isIdleTimerDisabled = sender.isOn
     }
 
     func exportExls() {
@@ -241,12 +282,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         IHProgressHUD.show(withStatus: "deviceId有误")
     }
-
-    func didDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice]) {
+    
+    func didDiscoveryWith(devices: [BleDicoveryDevice]) {
         print("found device: \(devices)")
     }
 
-    func didFinishDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice]) {
+    func didFinishDiscoveryWith(devices: [BleDicoveryDevice]) {
         IHProgressHUD.dismiss()
         scanBtn.isEnabled = true
         isScaning = false
@@ -282,16 +323,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let model = indexPath.section == 0 ? dataRow[indexPath.row] : dataPaired[indexPath.row]
+//        if indexPath.section == 0 && indexPath.row >= dataRow.count {
+//            return UITableViewCell()
+//        } else if (indexPath.row >= dataPaired.count) {
+//            return UITableViewCell()
+//        }
+        let model = indexPath.section == 1 ? dataPaired[indexPath.row] : dataRow[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CELL", for: indexPath) as? DeviceCell {
             if connectMac == model.macAddress {
                 cell.txtLbl.textColor = .green
-                cell.txtLbl.text =  (model.localName ?? "-") + "已连接"
+                cell.txtLbl.text = (model.localName ) + "已连接"
             } else {
                 cell.txtLbl.textColor = .black
                 cell.txtLbl.text = model.localName
             }
-            cell.detailLbl.text = model.macAddress
+            cell.detailLbl.text = "\(model.macAddress),RSSI:\(model.RSSI)"
             cell.subDetailLbl.text = model.deviceId
             return cell
         }
@@ -306,10 +352,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if isConnected {
             return
         }
+//        if indexPath.row >= dataRow.count {
+//            return
+//        }
         IHProgressHUD.show()
         isConnecting = true
-        let model = dataRow[indexPath.row]
+        let model = indexPath.section == 1 ? dataPaired[indexPath.row] : dataRow[indexPath.row]
         apiManager.connectToDevice(device: model)
+    }
+    
+    private func statOTA() {
+        if let binFile = Bundle.main.url(forResource: "syd8811_hid_FirmwareV1.3", withExtension: "bin")
+         {
+            do {
+                let d = try Data(contentsOf: binFile)
+                apiManager.startSendOTAFile(data: d)
+            } catch (let e) {
+                print("err\(e)")
+            }
+           
+        }
     }
 
     private func gotoDevice() {
@@ -354,6 +416,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?) {
+        IHProgressHUD.dismiss()
+        isConnecting = false
         switch error {
         case .scanFailed:
             IHProgressHUD.showError(withStatus: "扫描失败")
@@ -368,23 +432,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     func bleConnectStatus(status: DeviceBleStatus, device: BleDevice?) {
+        IHProgressHUD.dismiss()
         isConnecting = false
         switch status {
         case .connected:
             IHProgressHUD.dismiss()
             scanBtn.isEnabled = false
             disConBtn.isEnabled = true
+            apiBtn.isEnabled = true
             isConnected = true
             connectMac = device?.macAddress ?? ""
             txtFied2.text = device?.deviceId
             tableView.reloadData()
-            gotoDevice()
+            //gotoDevice()
+            curTime += 1
             updateCntUD(uid: device?.identifier)
             break
         case .disconnected:
             scanBtn.isEnabled = true
             disConBtn.isEnabled = false
             isConnected = false
+            apiBtn.isEnabled = false
             connectMac = ""
             if !(txtFied2.text?.isEmpty ?? true) {
                 connectBtn.isEnabled = true
@@ -432,10 +500,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func armBandBloodOxygen(num: Int, device: APIHeartRate.BleDevice) {}
 
-    func bleConnectLog(logString: String, device: APIHeartRate.BleDevice?) {}
+    func bleConnectLog(logString: String, device: APIHeartRate.BleDevice?) {
+        print("\(logString)\(curTime)")
+    }
     func deviceFirmware(version: String, device: APIHeartRate.BleDevice) {}
 
     func deviceHardware(version: String, device: APIHeartRate.BleDevice) {}
 
     func deviceSoftware(version: String, device: APIHeartRate.BleDevice) {}
+    
+    //MARK- OTA
+    func bleOtaStauts(status: OtaStatus, progress: Float) {
+        print("status:\(status),==== progress: \(progress)")
+    }
+    
+    func bleOtaError(error: OtaError) {
+        print("error\(error)")
+    }
 }

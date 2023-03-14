@@ -5,6 +5,7 @@
 import CoreBluetooth
 import Foundation
 import Swift
+import UIKit
 import _Concurrency
 import _StringProcessing
 public protocol HRRemotePeripheralDelegate : AnyObject {
@@ -139,6 +140,9 @@ public protocol APIHeartRateObserver {
   func armBandMaxHeartRateUpdated()
   func armBandSystemTimeUpdated()
   func armBandBloodOxygen(num: Swift.Int, device: APIHeartRate.BleDevice)
+  func armBandPlayStatusChange()
+  func armBandResetFactory()
+  func armBandUnbind()
   func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
@@ -146,6 +150,8 @@ public protocol APIHeartRateObserver {
   func didFinishDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice])
   func bleCommonError(error: APIHeartRate.BleCommonError)
   func bleAvailability(status: APIHeartRate.BleAvailability)
+  func bleOtaError(error: APIHeartRate.OtaError)
+  func bleOtaStauts(status: APIHeartRate.OtaStatus, progress: Swift.Float)
 }
 extension APIHeartRate.APIHeartRateObserver {
   public func devicePower(power: Swift.String, device: APIHeartRate.BleDevice)
@@ -167,6 +173,9 @@ extension APIHeartRate.APIHeartRateObserver {
   public func armBandMaxHeartRateUpdated()
   public func armBandSystemTimeUpdated()
   public func armBandBloodOxygen(num: Swift.Int, device: APIHeartRate.BleDevice)
+  public func armBandPlayStatusChange()
+  public func armBandResetFactory()
+  public func armBandUnbind()
   public func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   public func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   public func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
@@ -174,6 +183,8 @@ extension APIHeartRate.APIHeartRateObserver {
   public func didFinishDiscoveryWith(devices: [APIHeartRate.BleDicoveryDevice])
   public func bleCommonError(error: APIHeartRate.BleCommonError)
   public func bleAvailability(status: APIHeartRate.BleAvailability)
+  public func bleOtaError(error: APIHeartRate.OtaError)
+  public func bleOtaStauts(status: APIHeartRate.OtaStatus, progress: Swift.Float)
 }
 @_hasMissingDesignatedInitializers public class HRRemoteCentral : APIHeartRate.HRRemotePeer {
   @objc deinit
@@ -196,15 +207,17 @@ extension APIHeartRate.APIHeartRateObserver {
   public func getSoftwareVersion()
   public func getSystemID()
   public func requestDisconnect()
-  public func setHeartRateMax(heartRateMax: Swift.UInt8)
+  public func setHeartRateThreshold(min: Swift.UInt8, max: Swift.UInt8)
   public func getSerialNum()
   public func getStepFrequency()
   public func getRTOxygen()
   public func getHeartRate()
   public func syncDeviceTime()
+  public func resetBand()
   public func readCharacteristicValue(characteristicUuid: Swift.String)
   public func setCharacteristicNotification(characteristicUuid: Swift.String, enabled: Swift.Bool)
   public func writeToBle(characteristicUuid: Swift.String, cmd: Foundation.Data)
+  public func startSendOTAFile(data: Foundation.Data)
   @objc deinit
 }
 public func == (lhs: APIHeartRate.BleAvailability, rhs: APIHeartRate.BleAvailability) -> Swift.Bool
@@ -264,6 +277,7 @@ public typealias HRSendDataCompletionHandler = ((_ data: Foundation.Data, _ remo
 }
 public protocol HRRemotePeerDelegate : AnyObject {
   func remotePeer(characteristic: CoreBluetooth.CBCharacteristic, _ remotePeer: APIHeartRate.HRRemotePeer, didSendArbitraryData data: Foundation.Data)
+  func remotePeerDidWriteData()
 }
 public func == (lhs: APIHeartRate.HRRemotePeer, rhs: APIHeartRate.HRRemotePeer) -> Swift.Bool
 @_hasMissingDesignatedInitializers public class HRRemotePeer : Swift.Equatable {
@@ -302,6 +316,22 @@ public protocol HRPeripheralDelegate : AnyObject {
   public func startWithConfiguration(_ configuration: APIHeartRate.HRPeripheralConfiguration) throws
   public func stop() throws
   @objc deinit
+}
+public enum OtaError : Swift.Error {
+  case invalidFile
+  case interputed
+  case invalidResponse
+  case reSend(Swift.Int, Swift.Int)
+}
+public enum OtaStatus {
+  case start(Swift.Int)
+  case writeStart
+  case writeEnd
+  case erase
+  case inProgress(Swift.Int, Swift.Int)
+  case finish
+  case failed
+  case compete
 }
 extension APIHeartRate.BleDevice.ReadType : Swift.Equatable {}
 extension APIHeartRate.BleDevice.ReadType : Swift.Hashable {}

@@ -5,13 +5,10 @@
 //  Created by Tek on 2023/1/12.
 //
 
-
+import APIHeartRate
 import IHProgressHUD
 import UIKit
-import APIHeartRate
 class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, APIHeartRateObserver {
- 
-
     func didDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice]) {}
 
     func didFinishDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice]) {}
@@ -44,7 +41,15 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
     lazy var txtFied1: UITextField = {
         let txtF = UITextField(frame: .zero)
         txtF.keyboardType = .numberPad
-        txtF.placeholder = "输入震动阈值"
+        txtF.placeholder = "左边界"
+        txtF.borderStyle = .roundedRect
+        return txtF
+    }()
+    lazy var txtFied2: UITextField = {
+        let txtF = UITextField(frame: .zero)
+        txtF.keyboardType = .numberPad
+        txtF.borderStyle = .roundedRect
+        txtF.placeholder = "右边界"
         return txtF
     }()
 
@@ -62,7 +67,8 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
         apiManager.addObserver(observer: self)
         logTxtView.frame = CGRectMake(0, 0, view.frame.width, 300)
         mCollectionView.frame = CGRectMake(0, 310, view.frame.width, 290)
-        txtFied1.frame = CGRectMake(10, 580, 200, 50)
+        txtFied1.frame = CGRectMake(10, 580, 100, 50)
+        txtFied2.frame = CGRectMake(120, 580, 100, 50)
         let sendBtn = TestBtn(frame: CGRectMake(220, 580, 80, 50), title: "设置") { [weak self] _ in
             self?.setVibrateMaxValue()
         }
@@ -73,6 +79,7 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
         view.addSubview(logTxtView)
         view.addSubview(mCollectionView)
         view.addSubview(txtFied1)
+        view.addSubview(txtFied2)
         view.addSubview(sendBtn)
     }
 
@@ -91,15 +98,11 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
     }
 
     func setVibrateMaxValue() {
-        guard let v = txtFied1.text else {
+        guard let v = txtFied1.text , let v2 = txtFied2.text else {
             Logger.log("阈值输入有误")
             return
         }
-        if v.isEmpty {
-            Logger.log("阈值输入有误")
-            return
-        }
-        apiManager.setHeartRateMax(heartRateMax: UInt8(v) ?? 0)
+        apiManager.setHeartRateThreshold(min: UInt8(v) ?? 0, max: UInt8(v2) ?? 0)
     }
 
     // MARK: Collection View
@@ -117,45 +120,34 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if indexPath.item > 7 {
-            IHProgressHUD.showError(withStatus: "此功能开发中")
-            return
-        }
         Logger.log("开始 \(btnArray[indexPath.item]):")
         switch indexPath.item {
         case 0:
             apiManager.readDeviceBatteryPower()
-            break
         case 1:
             apiManager.getManufacturerName()
-            break
         case 2:
             apiManager.getModelName()
-            break
         case 3:
             apiManager.getHardwareVersion()
-            break
         case 4:
             apiManager.getFirmwareVersion()
-            break
         case 5:
             apiManager.getSoftwareVersion()
-            break
         case 6:
-            apiManager.getSystemID()
-            break
+            Logger.log("该功能还未实现")
+            //apiManager.getSystemID()
         case 7:
             apiManager.syncDeviceTime()
-            break
         case 8:
-            apiManager.getSerialNum()
-            break
+            Logger.log("该功能还未实现")
+            //apiManager.getSerialNum()
         case 9:
-            apiManager.getStepFrequency()
-            break
+            Logger.log("该功能还未实现")
+            //apiManager.getStepFrequency()
         case 10:
-            apiManager.getRTOxygen()
-            break
+            Logger.log("该功能还未实现")
+            //apiManager.getRTOxygen()
         default:
             break
         }
@@ -170,6 +162,7 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
     }
 
     // MARK: API Delegate
+
     func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?) {
         var e = ""
         switch error {
@@ -194,7 +187,7 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
         }
         Logger.log(e)
     }
-    
+
     func bleCommonError(error: APIHeartRate.BleCommonError) {
         var logS = ""
         switch error {
@@ -281,6 +274,17 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
 
     func armBandRealTimeHeartRate(hRInfo: APIHeartRate.HRInfo, device: APIHeartRate.BleDevice) {
         Logger.log("心率为： \(hRInfo.rateStr)")
+    }
+
+    func armBandResetFactory() {
+        Logger.log("恢复出厂")
+    }
+    func armBandPlayStatusChange() {
+        Logger.log("切换播放状态")
+    }
+
+    func armBandUnbind() {
+        Logger.log("解除绑定")
     }
 
     func deviceBaseInfo(baseInfo: APIHeartRate.FBKApiBaseInfo, device: APIHeartRate.BleDevice) { }
