@@ -5,7 +5,7 @@ PODS:
   - SnapKit (5.6.0)
 
 DEPENDENCIES:
-  - APIHeartRate (= 0.0.5)
+  - APIHeartRate
   - IHProgressHUD
   - IQKeyboardManager
   - SnapKit
@@ -23,6 +23,6 @@ SPEC CHECKSUMS:
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
 
-PODFILE CHECKSUM: d43ed7fb57f32b499fb9520efa8ccad844e0dc40
+PODFILE CHECKSUM: 27afa8d7ef67e1d8d30bda5c7ebf910ab4fd6fc4
 
 COCOAPODS: 1.11.2

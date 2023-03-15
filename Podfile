@@ -8,7 +8,7 @@ target 'testapihr' do
   # Pods for testapihr
   pod 'SnapKit'
   pod 'IHProgressHUD'
-  pod 'APIHeartRate','0.0.5'
+  pod 'APIHeartRate'
   pod 'IQKeyboardManager'
   #pod 'SSZipArchive','2.0.7'
 end
