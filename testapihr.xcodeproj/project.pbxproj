@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		58EF161EC545739E31CAD33A /* Pods_testapihr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A7B02A17D6234AFFB831C2 /* Pods_testapihr.framework */; };
 		BB0AABF929C1D7F1006A332E /* syd8811_hid_heart_V1.1.bin in Resources */ = {isa = PBXBuildFile; fileRef = BB0AABF829C1D7F1006A332E /* syd8811_hid_heart_V1.1.bin */; };
+		BB0AAC0329C3231F006A332E /* APIHeartRate.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB0AAC0229C3231F006A332E /* APIHeartRate.xcframework */; };
+		BB0AAC0429C3231F006A332E /* APIHeartRate.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BB0AAC0229C3231F006A332E /* APIHeartRate.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BBB35DEE296FFD7B00C63B7E /* DeviceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB35DED296FFD7B00C63B7E /* DeviceController.swift */; };
 		BBB35DF8297010B700C63B7E /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB35DF7297010B700C63B7E /* DeviceCell.swift */; };
 		BBB5320C296801B1005757CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB5320B296801B1005757CA /* AppDelegate.swift */; };
@@ -28,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BB0AAC0429C3231F006A332E /* APIHeartRate.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,6 +42,7 @@
 		0F2ECEDD565B31ED645D39DF /* Pods-testapihr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapihr.debug.xcconfig"; path = "Target Support Files/Pods-testapihr/Pods-testapihr.debug.xcconfig"; sourceTree = "<group>"; };
 		87DA700608CF60718B433ABC /* Pods-testapihr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-testapihr.release.xcconfig"; path = "Target Support Files/Pods-testapihr/Pods-testapihr.release.xcconfig"; sourceTree = "<group>"; };
 		BB0AABF829C1D7F1006A332E /* syd8811_hid_heart_V1.1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = syd8811_hid_heart_V1.1.bin; sourceTree = "<group>"; };
+		BB0AAC0229C3231F006A332E /* APIHeartRate.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = APIHeartRate.xcframework; path = "../../../Library/Containers/com.tencent.xinWeChat/Data/Library/Application Support/com.tencent.xinWeChat/2.0b4.0.9/5f099409d679cbc18535e8ed95f1cc1d/Message/MessageTemp/852931105a4afee7736dff10fc8ccbec/OpenData/APIHeartRate.xcframework"; sourceTree = "<group>"; };
 		BBB35DED296FFD7B00C63B7E /* DeviceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceController.swift; sourceTree = "<group>"; };
 		BBB35DF7297010B700C63B7E /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 		BBB53208296801B1005757CA /* testapihr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testapihr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +63,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58EF161EC545739E31CAD33A /* Pods_testapihr.framework in Frameworks */,
+				BB0AAC0329C3231F006A332E /* APIHeartRate.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,7 @@
 		0B0F0C7F0FBA925FA79E1C4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BB0AAC0229C3231F006A332E /* APIHeartRate.xcframework */,
 				01A7B02A17D6234AFFB831C2 /* Pods_testapihr.framework */,
 			);
 			name = Frameworks;
