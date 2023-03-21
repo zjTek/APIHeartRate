@@ -114,6 +114,17 @@ public enum DeviceBleStatus {
     get
   }
 }
+public enum BatteryStatus {
+  case normal
+  case charging
+  case full
+  case unknown
+  public static func == (a: APIHeartRate.BatteryStatus, b: APIHeartRate.BatteryStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct FBKApiBaseInfo {
 }
 public struct HRInfo {
@@ -143,6 +154,7 @@ public protocol APIHeartRateObserver {
   func armBandPlayStatusChange()
   func armBandResetFactory()
   func armBandUnbind()
+  func batteryStatus(state: APIHeartRate.BatteryStatus)
   func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
@@ -176,6 +188,7 @@ extension APIHeartRate.APIHeartRateObserver {
   public func armBandPlayStatusChange()
   public func armBandResetFactory()
   public func armBandUnbind()
+  public func batteryStatus(state: APIHeartRate.BatteryStatus)
   public func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   public func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   public func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
@@ -218,6 +231,7 @@ extension APIHeartRate.APIHeartRateObserver {
   public func setCharacteristicNotification(characteristicUuid: Swift.String, enabled: Swift.Bool)
   public func writeToBle(characteristicUuid: Swift.String, cmd: Foundation.Data)
   public func startSendOTAFile(data: Foundation.Data)
+  public func queryBatteryStatus()
   @objc deinit
 }
 public func == (lhs: APIHeartRate.BleAvailability, rhs: APIHeartRate.BleAvailability) -> Swift.Bool
@@ -341,5 +355,7 @@ extension APIHeartRate.HRCentral.ContinuousScanState : Swift.Equatable {}
 extension APIHeartRate.HRCentral.ContinuousScanState : Swift.Hashable {}
 extension APIHeartRate.DeviceBleStatus : Swift.Equatable {}
 extension APIHeartRate.DeviceBleStatus : Swift.Hashable {}
+extension APIHeartRate.BatteryStatus : Swift.Equatable {}
+extension APIHeartRate.BatteryStatus : Swift.Hashable {}
 extension APIHeartRate.BleUnavailabilityCause : Swift.Equatable {}
 extension APIHeartRate.BleUnavailabilityCause : Swift.Hashable {}

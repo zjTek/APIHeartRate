@@ -3583,6 +3583,280 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "BatteryStatus",
+        "printedName": "BatteryStatus",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "normal",
+            "printedName": "normal",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.BatteryStatus.Type) -> APIHeartRate.BatteryStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BatteryStatus",
+                    "printedName": "APIHeartRate.BatteryStatus",
+                    "usr": "s:12APIHeartRate13BatteryStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.BatteryStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BatteryStatus",
+                        "printedName": "APIHeartRate.BatteryStatus",
+                        "usr": "s:12APIHeartRate13BatteryStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate13BatteryStatusO6normalyA2CmF",
+            "mangledName": "$s12APIHeartRate13BatteryStatusO6normalyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Var",
+            "name": "charging",
+            "printedName": "charging",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.BatteryStatus.Type) -> APIHeartRate.BatteryStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BatteryStatus",
+                    "printedName": "APIHeartRate.BatteryStatus",
+                    "usr": "s:12APIHeartRate13BatteryStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.BatteryStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BatteryStatus",
+                        "printedName": "APIHeartRate.BatteryStatus",
+                        "usr": "s:12APIHeartRate13BatteryStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate13BatteryStatusO8chargingyA2CmF",
+            "mangledName": "$s12APIHeartRate13BatteryStatusO8chargingyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Var",
+            "name": "full",
+            "printedName": "full",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.BatteryStatus.Type) -> APIHeartRate.BatteryStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BatteryStatus",
+                    "printedName": "APIHeartRate.BatteryStatus",
+                    "usr": "s:12APIHeartRate13BatteryStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.BatteryStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BatteryStatus",
+                        "printedName": "APIHeartRate.BatteryStatus",
+                        "usr": "s:12APIHeartRate13BatteryStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate13BatteryStatusO4fullyA2CmF",
+            "mangledName": "$s12APIHeartRate13BatteryStatusO4fullyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Var",
+            "name": "unknown",
+            "printedName": "unknown",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.BatteryStatus.Type) -> APIHeartRate.BatteryStatus",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "BatteryStatus",
+                    "printedName": "APIHeartRate.BatteryStatus",
+                    "usr": "s:12APIHeartRate13BatteryStatusO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.BatteryStatus.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "BatteryStatus",
+                        "printedName": "APIHeartRate.BatteryStatus",
+                        "usr": "s:12APIHeartRate13BatteryStatusO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate13BatteryStatusO7unknownyA2CmF",
+            "mangledName": "$s12APIHeartRate13BatteryStatusO7unknownyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BatteryStatus",
+                "printedName": "APIHeartRate.BatteryStatus",
+                "usr": "s:12APIHeartRate13BatteryStatusO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BatteryStatus",
+                "printedName": "APIHeartRate.BatteryStatus",
+                "usr": "s:12APIHeartRate13BatteryStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate13BatteryStatusO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12APIHeartRate13BatteryStatusO2eeoiySbAC_ACtFZ",
+            "moduleName": "APIHeartRate",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12APIHeartRate13BatteryStatusO9hashValueSivp",
+            "mangledName": "$s12APIHeartRate13BatteryStatusO9hashValueSivp",
+            "moduleName": "APIHeartRate",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12APIHeartRate13BatteryStatusO9hashValueSivg",
+                "mangledName": "$s12APIHeartRate13BatteryStatusO9hashValueSivg",
+                "moduleName": "APIHeartRate",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate13BatteryStatusO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12APIHeartRate13BatteryStatusO4hash4intoys6HasherVz_tF",
+            "moduleName": "APIHeartRate",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12APIHeartRate13BatteryStatusO",
+        "mangledName": "$s12APIHeartRate13BatteryStatusO",
+        "moduleName": "APIHeartRate",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "FBKApiBaseInfo",
         "printedName": "FBKApiBaseInfo",
         "declKind": "Struct",
@@ -4429,6 +4703,33 @@
             "declKind": "Func",
             "usr": "s:12APIHeartRate0aB8ObserverP13armBandUnbindyyF",
             "mangledName": "$s12APIHeartRate0aB8ObserverP13armBandUnbindyyF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "batteryStatus",
+            "printedName": "batteryStatus(state:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BatteryStatus",
+                "printedName": "APIHeartRate.BatteryStatus",
+                "usr": "s:12APIHeartRate13BatteryStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP13batteryStatus5stateyAA07BatteryE0O_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP13batteryStatus5stateyAA07BatteryE0O_tF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -5451,6 +5752,32 @@
             "declKind": "Func",
             "usr": "s:12APIHeartRate0aB8ObserverPAAE13armBandUnbindyyF",
             "mangledName": "$s12APIHeartRate0aB8ObserverPAAE13armBandUnbindyyF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "batteryStatus",
+            "printedName": "batteryStatus(state:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BatteryStatus",
+                "printedName": "APIHeartRate.BatteryStatus",
+                "usr": "s:12APIHeartRate13BatteryStatusO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE13batteryStatus5stateyAA07BatteryE0O_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE13batteryStatus5stateyAA07BatteryE0O_tF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -6564,6 +6891,27 @@
             "declKind": "Func",
             "usr": "s:12APIHeartRate0aB7ManagerC16startSendOTAFile4datay10Foundation4DataV_tF",
             "mangledName": "$s12APIHeartRate0aB7ManagerC16startSendOTAFile4datay10Foundation4DataV_tF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryBatteryStatus",
+            "printedName": "queryBatteryStatus()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC18queryBatteryStatusyyF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC18queryBatteryStatusyyF",
             "moduleName": "APIHeartRate",
             "declAttributes": [
               "AccessControl",
@@ -10203,7 +10551,7 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateObserver.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 722,
       "length": 21,
       "value": "\"yyyy-mm-dd HH:mm:ss\""
     },
@@ -10300,141 +10648,148 @@
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 493,
+      "length": 4,
+      "value": "0x0a"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 536,
+      "offset": 576,
       "length": 6,
       "value": "\"180F\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 598,
+      "offset": 638,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 656,
+      "offset": 696,
       "length": 6,
       "value": "\"FEE7\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 714,
+      "offset": 754,
       "length": 6,
       "value": "\"FEC9\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 776,
+      "offset": 816,
       "length": 6,
       "value": "\"180A\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 835,
+      "offset": 875,
       "length": 6,
       "value": "\"2A29\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 895,
+      "offset": 935,
       "length": 6,
       "value": "\"2A24\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 958,
+      "offset": 998,
       "length": 6,
       "value": "\"2A27\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1021,
+      "offset": 1061,
       "length": 6,
       "value": "\"2A26\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1084,
+      "offset": 1124,
       "length": 6,
       "value": "\"2A28\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1144,
+      "offset": 1184,
       "length": 6,
       "value": "\"2A23\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1208,
+      "offset": 1248,
       "length": 6,
       "value": "\"180D\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1274,
+      "offset": 1314,
       "length": 6,
       "value": "\"2A37\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1338,
+      "offset": 1378,
       "length": 6,
       "value": "\"2A38\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1400,
+      "offset": 1440,
       "length": 38,
       "value": "\"66880000-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1493,
+      "offset": 1533,
       "length": 38,
       "value": "\"66880001-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1587,
+      "offset": 1627,
       "length": 38,
       "value": "\"66880002-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1674,
+      "offset": 1714,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1775,
+      "offset": 1815,
       "length": 6,
       "value": "\"FF00\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1833,
+      "offset": 1873,
       "length": 6,
       "value": "\"FF01\""
     },
