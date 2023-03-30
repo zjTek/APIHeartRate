@@ -1,10 +1,10 @@
 PODS:
-  - APIHeartRate (0.0.6)
+  - APIHeartRate (0.0.9)
   - IQKeyboardManager (6.5.11)
   - SSZipArchive (2.0.7)
 
 DEPENDENCIES:
-  - APIHeartRate
+  - APIHeartRate (= 0.0.9)
   - IQKeyboardManager
   - SSZipArchive (= 2.0.7)
 
@@ -15,10 +15,10 @@ SPEC REPOS:
     - SSZipArchive
 
 SPEC CHECKSUMS:
-  APIHeartRate: 46d0a97435c903a4e4710aafbe1a2309fc537f40
+  APIHeartRate: 3dd56388cbde04c57b3b1c56623f53b51591e71b
   IQKeyboardManager: ef43ce1ba1e5aaf4adf222c0a46f39761f246879
   SSZipArchive: 8c197761d66bd33e7f8b5b51ee57dff303971150
 
-PODFILE CHECKSUM: 9d7faa4355d45d28687c53c0167001cca24cc11e
+PODFILE CHECKSUM: 72fc451aa1060bfa028a13e72eb86573c3d784f7
 
 COCOAPODS: 1.11.2
