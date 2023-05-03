@@ -560,3 +560,158 @@ fun bleOtaError(error: OtaError)
 |progress|更新进度|Float|-|-|
 |error|异常信息|OtaError|-|Failed,InvalidFile,ReSend|
 
+
+<font color=red>============================== 新增接口==============</font>
+
+## 设置运动模式
+
+### 1) 接口方法
+```kotlin
+fun setBandSportMode(mode: SportMode)
+```
+
+### 2) 接口描述：
+
+* 设置设备运动模式
+
+### 3) 参数:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|mode|SportMode.normal:日常模式，SportMode.sport运动模式|SportMode|Y|-|
+
+### 5) 结果回调:
+
+```kotlin
+fun bandSportModeChanged()
+```
+
+### 6) 结果参数说明: -
+
+## 读取运动模式
+
+### 1) 接口方法
+```kotlin
+fun queryBandSportMode()
+```
+
+### 2) 接口描述：
+
+* 读取设备运动模式
+
+### 3) 参数: -
+### 5) 结果回调:
+
+```kotlin
+fun deviceSportModeInfo(mode: SportMode)
+```
+
+### 6) 结果参数说明:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|mode|运动模式|SportMode|-|normal,sport|
+
+
+## 心率汇总
+
+### 1) 接口方法
+```kotlin
+fun queryHeartRateRecord(startTime: Int, endTime:Int)
+```
+
+### 2) 接口描述：
+
+* 读取心率汇总数据
+
+### 3) 参数:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|startTime|开始时段|Int|Y|0-23|
+|endTime|结束时段|Int|Y|0-23|
+### 5) 结果回调:
+
+```swkotlinift
+fun deviceHeartRateRecordInfo(info: HeartRateInfo)
+```
+
+### 6) 结果参数说明:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|info|心率信息数据|HeartRateInfo|-|HeartRateInfo.max 最高, HeartRateInfo.min 最低, HeartRateInfo.average 平均|
+
+## 步数汇总
+
+### 1) 接口方法
+```kotlin
+fun queryStepRecord(startTime: Int, endTime:Int)
+```
+
+### 2) 接口描述：
+
+* 读取心率汇总数据
+
+### 3) 参数:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|startTime|开始时段|Int|Y|0-23|
+|endTime|结束时段|Int|Y|0-23|
+### 5) 结果回调:
+
+```kotlin
+fun deviceStepRecordInfo(info: StepInfo)
+```
+
+### 6) 结果参数说明:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|info|步数信息数据|StepInfo|-|StepInfo.total 一天总步数, StepInfo.current 分时段步数|
+
+
+## 睡眠汇总
+
+### 1) 接口方法
+```kotlin
+fun querySleepRecord()
+```
+
+### 2) 接口描述：
+
+* 读取心率汇总数据
+
+### 3) 参数: -
+### 5) 结果回调:
+
+```kotlin
+fun deviceSleepRecordInfo(info: SleepInfo)
+```
+
+### 6) 结果参数说明:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|info|步数信息数据|SleepInfo|-|SleepInfo.total 一天睡眠时间, SleepInfo.deep 深睡眠，SleepInfo.deep 浅睡眠，SleepInfo.wake 清醒次数|
+
+## 血氧汇总
+
+### 1) 接口方法
+```kotlin
+fun queryOxgenBloodRecord(startTime: Int, endTime:Int)
+```
+
+### 2) 接口描述：
+
+* 读取心率汇总数据
+
+### 3) 参数:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|startTime|开始时段|Int|Y|0-23|
+|endTime|结束时段|Int|Y|0-23|
+### 5) 结果回调:
+
+```kotlin
+fun deviceOxgenBloodRecordInfo(info: OxgenBloodInfo)
+```
+
+### 6) 结果参数说明:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|info|血氧信息数据|OxgenBlood|-|OxgenBlood.max 最高, OxgenBlood.min 最低, OxgenBlood.average 平均|

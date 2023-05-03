@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name APIHeartRate
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import CoreBluetooth
@@ -165,6 +165,14 @@ public protocol APIHeartRateObserver {
   func bleAvailability(status: APIHeartRate.BleAvailability)
   func bleOtaError(error: APIHeartRate.OtaError)
   func bleOtaStauts(status: APIHeartRate.OtaStatus, progress: Swift.Float)
+  func summaryHeartRateInfo(info: [[Swift.String : Any]])
+  func summaryStepsInfo(info: [[Swift.String : Any]])
+  func summaryBloodOxygenInfo(info: [[Swift.String : Any]])
+  func summaryPressureIndexInfo(info: [[Swift.String : Any]])
+  func summaryCalorieInfo(info: [[Swift.String : Any]])
+  func summarySleepInfo(info: [[Swift.String : Any]])
+  func summaryExerciseInfo(info: [[Swift.String : Any]])
+  func motionDataInfo(info: [[Swift.String : Any]])
 }
 extension APIHeartRate.APIHeartRateObserver {
   public func devicePower(power: Swift.String, device: APIHeartRate.BleDevice)
@@ -200,6 +208,14 @@ extension APIHeartRate.APIHeartRateObserver {
   public func bleAvailability(status: APIHeartRate.BleAvailability)
   public func bleOtaError(error: APIHeartRate.OtaError)
   public func bleOtaStauts(status: APIHeartRate.OtaStatus, progress: Swift.Float)
+  public func summaryHeartRateInfo(info: [[Swift.String : Any]])
+  public func summaryStepsInfo(info: [[Swift.String : Any]])
+  public func summaryBloodOxygenInfo(info: [[Swift.String : Any]])
+  public func summaryPressureIndexInfo(info: [[Swift.String : Any]])
+  public func summaryCalorieInfo(info: [[Swift.String : Any]])
+  public func summarySleepInfo(info: [[Swift.String : Any]])
+  public func summaryExerciseInfo(info: [[Swift.String : Any]])
+  public func motionDataInfo(info: [[Swift.String : Any]])
 }
 @_hasMissingDesignatedInitializers public class HRRemoteCentral : APIHeartRate.HRRemotePeer {
   @objc deinit
@@ -234,6 +250,14 @@ extension APIHeartRate.APIHeartRateObserver {
   public func writeToBle(characteristicUuid: Swift.String, cmd: Foundation.Data)
   public func startSendOTAFile(data: Foundation.Data)
   public func queryBatteryStatus()
+  public func getSummaryHeartRate(startDateStamp: Swift.Int, endDateStamp: Swift.Int)
+  public func getSummarySteps(startDateStamp: Swift.Int, endDateStamp: Swift.Int)
+  public func getSummaryBloodOxygen(startDateStamp: Swift.Int, endDateStamp: Swift.Int)
+  public func getSummaryPressureIndex(startDateStamp: Swift.Int, endDateStamp: Swift.Int)
+  public func getSummaryCalorie(startDateStamp: Swift.Int, endDateStamp: Swift.Int)
+  public func getSummarySleep(startDateStamp: Swift.Int, endDateStamp: Swift.Int)
+  public func getExerciseData(startDateStamp: Swift.Int, endDateStamp: Swift.Int)
+  public func getMotionData(pageSize: Swift.Int, sportMode: Swift.Bool)
   @objc deinit
 }
 public func == (lhs: APIHeartRate.BleAvailability, rhs: APIHeartRate.BleAvailability) -> Swift.Bool

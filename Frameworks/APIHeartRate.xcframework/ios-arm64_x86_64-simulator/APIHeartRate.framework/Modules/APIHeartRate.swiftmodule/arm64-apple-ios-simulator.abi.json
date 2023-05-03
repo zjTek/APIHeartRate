@@ -2642,6 +2642,16 @@
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
+        "moduleName": "APIHeartRate",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
         "moduleName": "APIHeartRate"
       },
       {
@@ -5067,6 +5077,390 @@
           },
           {
             "kind": "Function",
+            "name": "summaryHeartRateInfo",
+            "printedName": "summaryHeartRateInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP012summaryHeartB4Info4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP012summaryHeartB4Info4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryStepsInfo",
+            "printedName": "summaryStepsInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP16summaryStepsInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP16summaryStepsInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryBloodOxygenInfo",
+            "printedName": "summaryBloodOxygenInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP22summaryBloodOxygenInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP22summaryBloodOxygenInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryPressureIndexInfo",
+            "printedName": "summaryPressureIndexInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP24summaryPressureIndexInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP24summaryPressureIndexInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryCalorieInfo",
+            "printedName": "summaryCalorieInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP18summaryCalorieInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP18summaryCalorieInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summarySleepInfo",
+            "printedName": "summarySleepInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP16summarySleepInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP16summarySleepInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryExerciseInfo",
+            "printedName": "summaryExerciseInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP19summaryExerciseInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP19summaryExerciseInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "motionDataInfo",
+            "printedName": "motionDataInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP14motionDataInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP14motionDataInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "devicePower",
             "printedName": "devicePower(power:device:)",
             "children": [
@@ -6122,6 +6516,382 @@
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryHeartRateInfo",
+            "printedName": "summaryHeartRateInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE012summaryHeartB4Info4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE012summaryHeartB4Info4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryStepsInfo",
+            "printedName": "summaryStepsInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE16summaryStepsInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE16summaryStepsInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryBloodOxygenInfo",
+            "printedName": "summaryBloodOxygenInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE22summaryBloodOxygenInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE22summaryBloodOxygenInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryPressureIndexInfo",
+            "printedName": "summaryPressureIndexInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE24summaryPressureIndexInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE24summaryPressureIndexInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryCalorieInfo",
+            "printedName": "summaryCalorieInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE18summaryCalorieInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE18summaryCalorieInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summarySleepInfo",
+            "printedName": "summarySleepInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE16summarySleepInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE16summarySleepInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "summaryExerciseInfo",
+            "printedName": "summaryExerciseInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE19summaryExerciseInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE19summaryExerciseInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "motionDataInfo",
+            "printedName": "motionDataInfo(info:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[[Swift.String : Any]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE14motionDataInfo4infoySaySDySSypGG_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE14motionDataInfo4infoySaySDySSypGG_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -6957,6 +7727,262 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSummaryHeartRate",
+            "printedName": "getSummaryHeartRate(startDateStamp:endDateStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC015getSummaryHeartB014startDateStamp03endhI0ySi_SitF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC015getSummaryHeartB014startDateStamp03endhI0ySi_SitF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSummarySteps",
+            "printedName": "getSummarySteps(startDateStamp:endDateStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC15getSummarySteps14startDateStamp03endhI0ySi_SitF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC15getSummarySteps14startDateStamp03endhI0ySi_SitF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSummaryBloodOxygen",
+            "printedName": "getSummaryBloodOxygen(startDateStamp:endDateStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC21getSummaryBloodOxygen14startDateStamp03endiJ0ySi_SitF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC21getSummaryBloodOxygen14startDateStamp03endiJ0ySi_SitF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSummaryPressureIndex",
+            "printedName": "getSummaryPressureIndex(startDateStamp:endDateStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC23getSummaryPressureIndex14startDateStamp03endiJ0ySi_SitF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC23getSummaryPressureIndex14startDateStamp03endiJ0ySi_SitF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSummaryCalorie",
+            "printedName": "getSummaryCalorie(startDateStamp:endDateStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC17getSummaryCalorie14startDateStamp03endhI0ySi_SitF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC17getSummaryCalorie14startDateStamp03endhI0ySi_SitF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getSummarySleep",
+            "printedName": "getSummarySleep(startDateStamp:endDateStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC15getSummarySleep14startDateStamp03endhI0ySi_SitF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC15getSummarySleep14startDateStamp03endhI0ySi_SitF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getExerciseData",
+            "printedName": "getExerciseData(startDateStamp:endDateStamp:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC15getExerciseData14startDateStamp03endhI0ySi_SitF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC15getExerciseData14startDateStamp03endhI0ySi_SitF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getMotionData",
+            "printedName": "getMotionData(pageSize:sportMode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC13getMotionData8pageSize9sportModeySi_SbtF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC13getMotionData8pageSize9sportModeySi_SbtF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           }
@@ -10569,6 +11595,41 @@
       "value": "\"APIHeartRate.HRPeripheralConfiguration\""
     },
     {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
+      "kind": "Array",
+      "offset": 595,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
+      "kind": "IntegerLiteral",
+      "offset": 625,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
+      "kind": "BooleanLiteral",
+      "offset": 657,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
+      "kind": "StringLiteral",
+      "offset": 890,
+      "length": 21,
+      "value": "\"yyyy-MM-dd HH:00:00\""
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
+      "kind": "StringLiteral",
+      "offset": 1036,
+      "length": 21,
+      "value": "\"yyyy-MM-dd HH:mm:ss\""
+    },
+    {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRContinuousScanner.swift",
       "kind": "BooleanLiteral",
       "offset": 597,
@@ -10703,141 +11764,176 @@
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 569,
+      "length": 4,
+      "value": "0x0c"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 614,
+      "length": 4,
+      "value": "0x20"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 659,
+      "length": 4,
+      "value": "0x21"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 706,
+      "length": 4,
+      "value": "0x22"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 751,
+      "length": 4,
+      "value": "0x23"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 616,
+      "offset": 834,
       "length": 6,
       "value": "\"180F\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 678,
+      "offset": 896,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 736,
+      "offset": 954,
       "length": 6,
       "value": "\"FEE7\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 794,
+      "offset": 1012,
       "length": 6,
       "value": "\"FEC9\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 856,
+      "offset": 1074,
       "length": 6,
       "value": "\"180A\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 915,
+      "offset": 1133,
       "length": 6,
       "value": "\"2A29\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 975,
+      "offset": 1193,
       "length": 6,
       "value": "\"2A24\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1038,
+      "offset": 1256,
       "length": 6,
       "value": "\"2A27\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1101,
+      "offset": 1319,
       "length": 6,
       "value": "\"2A26\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1164,
+      "offset": 1382,
       "length": 6,
       "value": "\"2A28\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1224,
+      "offset": 1442,
       "length": 6,
       "value": "\"2A23\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1288,
+      "offset": 1506,
       "length": 6,
       "value": "\"180D\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1354,
+      "offset": 1572,
       "length": 6,
       "value": "\"2A37\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1418,
+      "offset": 1636,
       "length": 6,
       "value": "\"2A38\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1480,
+      "offset": 1698,
       "length": 38,
       "value": "\"66880000-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1573,
+      "offset": 1791,
       "length": 38,
       "value": "\"66880001-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1667,
+      "offset": 1885,
       "length": 38,
       "value": "\"66880002-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1754,
+      "offset": 1972,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1855,
+      "offset": 2073,
       "length": 6,
       "value": "\"FF00\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1913,
+      "offset": 2131,
       "length": 6,
       "value": "\"FF01\""
     },
@@ -10851,23 +11947,37 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp+Repo.swift",
       "kind": "IntegerLiteral",
-      "offset": 1558,
+      "offset": 1584,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
       "kind": "Dictionary",
-      "offset": 313,
+      "offset": 456,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
       "kind": "BooleanLiteral",
-      "offset": 427,
+      "offset": 570,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
+      "kind": "IntegerLiteral",
+      "offset": 657,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
+      "kind": "IntegerLiteral",
+      "offset": 692,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRPeer.swift",
