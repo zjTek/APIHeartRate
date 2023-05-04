@@ -8,7 +8,6 @@
 import APIHeartRate
 import IHProgressHUD
 import SnapKit
-import SwiftXLSX
 import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIHeartRateObserver {
     static let CONNECTED_KEY = "contected_device"
@@ -90,7 +89,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let btn = TestBtn(frame: CGRect.zero, title: "跳转API页面") { [weak self] _ in
             self?.gotoDevice()
         }
-        btn.isEnabled = false
+        btn.isEnabled = true
         return btn
     }()
     

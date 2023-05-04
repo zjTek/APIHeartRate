@@ -9,8 +9,37 @@ import APIHeartRate
 import IHProgressHUD
 import UIKit
 class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDataSource, UICollectionViewDelegate, APIHeartRateObserver {
+    func summaryHeartRateInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
+    
+    func summaryBloodOxygenInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
+    func  summaryStepsInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
+   
+    func summaryPressureIndexInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
+    
+    func summaryCalorieInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
+    
+    func summarySleepInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
+    
+    func summaryExerciseInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
+    
+    func motionDataInfo(info: [[String : Any]]) {
+        Logger.log(info.description)
+    }
     func didDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice]) {}
-
     func didFinishDiscoveryWith(discovery: [APIHeartRate.BleDicoveryDevice]) {}
     func bleAvailability(status: BleAvailability) {}
     override func viewWillDisappear(_ animated: Bool) {
@@ -22,7 +51,7 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
         print("de init")
     }
 
-    var btnArray = ["获取电量", "Manufacturer", "Model", "Hardware", "FirmWare", "Software", "SysID", "时间同步", "序列号", "实时步频", "实时血氧"]
+    var btnArray = ["获取电量", "Manufacturer", "Model", "Hardware", "FirmWare", "Software", "SysID", "时间同步", "序列号", "实时步频", "实时血氧","充电状态","心率汇总","步数汇总","血氧汇总","压力汇总","卡路里汇总","睡眠汇总","运动汇总","历史数据"]
     var apiManager = APIHeartRateManager.instance
 
     lazy var mCollectionView: UICollectionView = {
@@ -60,6 +89,7 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
         return txtView
     }()
 
+    var isSport = false
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -148,6 +178,51 @@ class DeviceViewController: UIViewController, LoggerDelegate, UICollectionViewDa
         case 10:
             Logger.log("该功能还未实现")
             //apiManager.getRTOxygen()
+        case 12:
+            let dfg = DateFormatter()
+            dfg.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let d1 = dfg.date(from: "2023-04-02 13:05:00")?.timeIntervalSince1970
+            let d2 = dfg.date(from: "2023-04-02 21:08:00")?.timeIntervalSince1970
+            apiManager.getSummaryHeartRate(startDateStamp: Int(d1?.rounded() ?? 0), endDateStamp: Int(d2?.rounded() ?? 0))
+        case 13:
+            let dfg = DateFormatter()
+            dfg.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let d1 = dfg.date(from: "2023-04-02 13:05:00")?.timeIntervalSince1970
+            let d2 = dfg.date(from: "2023-04-02 21:08:00")?.timeIntervalSince1970
+            apiManager.getSummarySteps(startDateStamp: Int(d1?.rounded() ?? 0), endDateStamp: Int(d2?.rounded() ?? 0))
+        case 14:
+            let dfg = DateFormatter()
+            dfg.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let d1 = dfg.date(from: "2023-04-02 13:05:00")?.timeIntervalSince1970
+            let d2 = dfg.date(from: "2023-04-02 21:08:00")?.timeIntervalSince1970
+            apiManager.getSummaryBloodOxygen(startDateStamp: Int(d1?.rounded() ?? 0), endDateStamp: Int(d2?.rounded() ?? 0))
+        case 15:
+            let dfg = DateFormatter()
+            dfg.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let d1 = dfg.date(from: "2023-04-02 13:05:00")?.timeIntervalSince1970
+            let d2 = dfg.date(from: "2023-04-02 21:08:00")?.timeIntervalSince1970
+            apiManager.getSummaryPressureIndex(startDateStamp: Int(d1?.rounded() ?? 0), endDateStamp: Int(d2?.rounded() ?? 0))
+        case 16:
+            let dfg = DateFormatter()
+            dfg.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let d1 = dfg.date(from: "2023-04-02 13:05:00")?.timeIntervalSince1970
+            let d2 = dfg.date(from: "2023-04-02 21:08:00")?.timeIntervalSince1970
+            apiManager.getSummaryCalorie(startDateStamp: Int(d1?.rounded() ?? 0), endDateStamp: Int(d2?.rounded() ?? 0))
+        case 17:
+            let dfg = DateFormatter()
+            dfg.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let d1 = dfg.date(from: "2023-04-02 13:05:00")?.timeIntervalSince1970
+            let d2 = dfg.date(from: "2023-04-02 21:08:00")?.timeIntervalSince1970
+            apiManager.getSummarySleep(startDateStamp: Int(d1?.rounded() ?? 0), endDateStamp: Int(d2?.rounded() ?? 0))
+        case 18:
+            let dfg = DateFormatter()
+            dfg.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let d1 = dfg.date(from: "2023-04-02 13:05:00")?.timeIntervalSince1970
+            let d2 = dfg.date(from: "2023-04-02 21:08:00")?.timeIntervalSince1970
+            apiManager.getExerciseData(startDateStamp: Int(d1?.rounded() ?? 0), endDateStamp: Int(d2?.rounded() ?? 0))
+        case 19:
+            apiManager.getMotionData(pageSize: 100, sportMode: isSport)
+            isSport = !isSport
         default:
             break
         }
