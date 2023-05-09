@@ -11597,114 +11597,100 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 964,
+      "offset": 1032,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 989,
+      "offset": 1057,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1021,
+      "offset": 1089,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1180,
+      "offset": 1248,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "StringLiteral",
-      "offset": 1284,
-      "length": 21,
-      "value": "\"yyyy-MM-dd HH:00:00\""
-    },
-    {
-      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
-      "kind": "StringLiteral",
-      "offset": 1430,
+      "offset": 1352,
       "length": 21,
       "value": "\"yyyy-MM-dd HH:mm:ss\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1525,
+      "offset": 1447,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1576,
+      "offset": 1498,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1615,
+      "offset": 1537,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 3433,
+      "offset": 3594,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 3478,
+      "offset": 3639,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 4084,
+      "offset": 4245,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 4133,
+      "offset": 4294,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 4757,
+      "offset": 4920,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 4812,
+      "offset": 4972,
       "length": 2,
       "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
-      "kind": "IntegerLiteral",
-      "offset": 4849,
-      "length": 1,
-      "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRContinuousScanner.swift",
