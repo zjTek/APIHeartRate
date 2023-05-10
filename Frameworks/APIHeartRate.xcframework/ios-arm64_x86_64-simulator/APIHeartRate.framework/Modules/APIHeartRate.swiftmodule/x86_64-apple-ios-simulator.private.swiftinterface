@@ -125,6 +125,15 @@ public enum BatteryStatus {
     get
   }
 }
+public enum DeviceMode {
+  case daily
+  case sport
+  public static func == (a: APIHeartRate.DeviceMode, b: APIHeartRate.DeviceMode) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct FBKApiBaseInfo {
 }
 public struct HRInfo {
@@ -156,6 +165,8 @@ public protocol APIHeartRateObserver {
   func armBandUnbind()
   func batteryStatus(state: APIHeartRate.BatteryStatus)
   func heartRateInMeasuring()
+  func armBandModeChanged(mode: APIHeartRate.DeviceMode)
+  func armBandRealTimePressure(pressure: Swift.Int, device: APIHeartRate.BleDevice)
   func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
@@ -199,6 +210,8 @@ extension APIHeartRate.APIHeartRateObserver {
   public func armBandUnbind()
   public func batteryStatus(state: APIHeartRate.BatteryStatus)
   public func heartRateInMeasuring()
+  public func armBandModeChanged(mode: APIHeartRate.DeviceMode)
+  public func armBandRealTimePressure(pressure: Swift.Int, device: APIHeartRate.BleDevice)
   public func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   public func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
   public func bleConnectError(error: APIHeartRate.BleConnectError, device: APIHeartRate.BleDevice?)
@@ -250,6 +263,8 @@ extension APIHeartRate.APIHeartRateObserver {
   public func writeToBle(characteristicUuid: Swift.String, cmd: Foundation.Data)
   public func startSendOTAFile(data: Foundation.Data)
   public func queryBatteryStatus()
+  public func queryDeviceMode()
+  public func switchDeviceMode(mode: APIHeartRate.DeviceMode)
   public func getSummaryHeartRate(startDateStamp: Swift.Double, endDateStamp: Swift.Double)
   public func getSummarySteps(startDateStamp: Swift.Double, endDateStamp: Swift.Double)
   public func getSummaryBloodOxygen(startDateStamp: Swift.Double, endDateStamp: Swift.Double)
@@ -383,5 +398,7 @@ extension APIHeartRate.DeviceBleStatus : Swift.Equatable {}
 extension APIHeartRate.DeviceBleStatus : Swift.Hashable {}
 extension APIHeartRate.BatteryStatus : Swift.Equatable {}
 extension APIHeartRate.BatteryStatus : Swift.Hashable {}
+extension APIHeartRate.DeviceMode : Swift.Equatable {}
+extension APIHeartRate.DeviceMode : Swift.Hashable {}
 extension APIHeartRate.BleUnavailabilityCause : Swift.Equatable {}
 extension APIHeartRate.BleUnavailabilityCause : Swift.Hashable {}

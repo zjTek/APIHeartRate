@@ -3867,6 +3867,206 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "DeviceMode",
+        "printedName": "DeviceMode",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "daily",
+            "printedName": "daily",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.DeviceMode.Type) -> APIHeartRate.DeviceMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DeviceMode",
+                    "printedName": "APIHeartRate.DeviceMode",
+                    "usr": "s:12APIHeartRate10DeviceModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.DeviceMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeviceMode",
+                        "printedName": "APIHeartRate.DeviceMode",
+                        "usr": "s:12APIHeartRate10DeviceModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate10DeviceModeO5dailyyA2CmF",
+            "mangledName": "$s12APIHeartRate10DeviceModeO5dailyyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Var",
+            "name": "sport",
+            "printedName": "sport",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.DeviceMode.Type) -> APIHeartRate.DeviceMode",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DeviceMode",
+                    "printedName": "APIHeartRate.DeviceMode",
+                    "usr": "s:12APIHeartRate10DeviceModeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.DeviceMode.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DeviceMode",
+                        "printedName": "APIHeartRate.DeviceMode",
+                        "usr": "s:12APIHeartRate10DeviceModeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate10DeviceModeO5sportyA2CmF",
+            "mangledName": "$s12APIHeartRate10DeviceModeO5sportyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceMode",
+                "printedName": "APIHeartRate.DeviceMode",
+                "usr": "s:12APIHeartRate10DeviceModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceMode",
+                "printedName": "APIHeartRate.DeviceMode",
+                "usr": "s:12APIHeartRate10DeviceModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate10DeviceModeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12APIHeartRate10DeviceModeO2eeoiySbAC_ACtFZ",
+            "moduleName": "APIHeartRate",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12APIHeartRate10DeviceModeO9hashValueSivp",
+            "mangledName": "$s12APIHeartRate10DeviceModeO9hashValueSivp",
+            "moduleName": "APIHeartRate",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12APIHeartRate10DeviceModeO9hashValueSivg",
+                "mangledName": "$s12APIHeartRate10DeviceModeO9hashValueSivg",
+                "moduleName": "APIHeartRate",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate10DeviceModeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12APIHeartRate10DeviceModeO4hash4intoys6HasherVz_tF",
+            "moduleName": "APIHeartRate",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12APIHeartRate10DeviceModeO",
+        "mangledName": "$s12APIHeartRate10DeviceModeO",
+        "moduleName": "APIHeartRate",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "FBKApiBaseInfo",
         "printedName": "FBKApiBaseInfo",
         "declKind": "Struct",
@@ -4761,6 +4961,66 @@
             "declKind": "Func",
             "usr": "s:12APIHeartRate0aB8ObserverP05heartB11InMeasuringyyF",
             "mangledName": "$s12APIHeartRate0aB8ObserverP05heartB11InMeasuringyyF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "armBandModeChanged",
+            "printedName": "armBandModeChanged(mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceMode",
+                "printedName": "APIHeartRate.DeviceMode",
+                "usr": "s:12APIHeartRate10DeviceModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP18armBandModeChanged4modeyAA06DeviceF0O_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP18armBandModeChanged4modeyAA06DeviceF0O_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "armBandRealTimePressure",
+            "printedName": "armBandRealTimePressure(pressure:device:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BleDevice",
+                "printedName": "APIHeartRate.BleDevice",
+                "usr": "s:12APIHeartRate9BleDeviceC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP23armBandRealTimePressure8pressure6deviceySi_AA9BleDeviceCtF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP23armBandRealTimePressure8pressure6deviceySi_AA9BleDeviceCtF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -6213,6 +6473,64 @@
             "declKind": "Func",
             "usr": "s:12APIHeartRate0aB8ObserverPAAE05heartB11InMeasuringyyF",
             "mangledName": "$s12APIHeartRate0aB8ObserverPAAE05heartB11InMeasuringyyF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "armBandModeChanged",
+            "printedName": "armBandModeChanged(mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceMode",
+                "printedName": "APIHeartRate.DeviceMode",
+                "usr": "s:12APIHeartRate10DeviceModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE18armBandModeChanged4modeyAA06DeviceF0O_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE18armBandModeChanged4modeyAA06DeviceF0O_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "armBandRealTimePressure",
+            "printedName": "armBandRealTimePressure(pressure:device:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "BleDevice",
+                "printedName": "APIHeartRate.BleDevice",
+                "usr": "s:12APIHeartRate9BleDeviceC"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE23armBandRealTimePressure8pressure6deviceySi_AA9BleDeviceCtF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE23armBandRealTimePressure8pressure6deviceySi_AA9BleDeviceCtF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -7727,6 +8045,52 @@
             "declAttributes": [
               "AccessControl",
               "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "queryDeviceMode",
+            "printedName": "queryDeviceMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC15queryDeviceModeyyF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC15queryDeviceModeyyF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "switchDeviceMode",
+            "printedName": "switchDeviceMode(mode:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "DeviceMode",
+                "printedName": "APIHeartRate.DeviceMode",
+                "usr": "s:12APIHeartRate10DeviceModeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC16switchDeviceMode4modeyAA0eF0O_tF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC16switchDeviceMode4modeyAA0eF0O_tF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
             ],
             "funcSelfKind": "NonMutating"
           },
@@ -11716,7 +12080,7 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateObserver.swift",
       "kind": "StringLiteral",
-      "offset": 722,
+      "offset": 779,
       "length": 21,
       "value": "\"yyyy-mm-dd HH:mm:ss\""
     },
@@ -11835,280 +12199,301 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 614,
+      "offset": 609,
+      "length": 3,
+      "value": "0xd"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 645,
+      "length": 4,
+      "value": "0x0e"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 686,
+      "length": 4,
+      "value": "0x0f"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 731,
       "length": 4,
       "value": "0x20"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 659,
+      "offset": 776,
       "length": 4,
       "value": "0x21"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 706,
+      "offset": 823,
       "length": 4,
       "value": "0x22"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 751,
+      "offset": 868,
       "length": 4,
       "value": "0x23"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 798,
+      "offset": 915,
       "length": 4,
       "value": "0x24"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 845,
+      "offset": 962,
       "length": 4,
       "value": "0x25"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 894,
+      "offset": 1011,
       "length": 4,
       "value": "0x26"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 941,
+      "offset": 1058,
       "length": 4,
       "value": "0x27"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 988,
+      "offset": 1105,
       "length": 4,
       "value": "0x28"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1035,
+      "offset": 1152,
       "length": 4,
       "value": "0x29"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1084,
+      "offset": 1201,
       "length": 4,
       "value": "0x2a"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1131,
+      "offset": 1248,
       "length": 4,
       "value": "0x2b"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1178,
+      "offset": 1295,
       "length": 4,
       "value": "0x2c"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1225,
+      "offset": 1342,
       "length": 4,
       "value": "0x2d"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1274,
+      "offset": 1391,
       "length": 4,
       "value": "0x2e"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1321,
+      "offset": 1438,
       "length": 4,
       "value": "0x2f"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1372,
+      "offset": 1489,
       "length": 4,
       "value": "0x30"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1423,
+      "offset": 1540,
       "length": 4,
       "value": "0x31"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1476,
+      "offset": 1593,
       "length": 4,
       "value": "0x32"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1527,
+      "offset": 1644,
       "length": 4,
       "value": "0x33"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1610,
+      "offset": 1727,
       "length": 6,
       "value": "\"180F\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1672,
+      "offset": 1789,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1730,
+      "offset": 1847,
       "length": 6,
       "value": "\"FEE7\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1788,
+      "offset": 1905,
       "length": 6,
       "value": "\"FEC9\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1850,
+      "offset": 1967,
       "length": 6,
       "value": "\"180A\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1909,
+      "offset": 2026,
       "length": 6,
       "value": "\"2A29\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1969,
+      "offset": 2086,
       "length": 6,
       "value": "\"2A24\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2032,
+      "offset": 2149,
       "length": 6,
       "value": "\"2A27\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2095,
+      "offset": 2212,
       "length": 6,
       "value": "\"2A26\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2158,
+      "offset": 2275,
       "length": 6,
       "value": "\"2A28\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2218,
+      "offset": 2335,
       "length": 6,
       "value": "\"2A23\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2282,
+      "offset": 2399,
       "length": 6,
       "value": "\"180D\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2348,
+      "offset": 2465,
       "length": 6,
       "value": "\"2A37\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2412,
+      "offset": 2529,
       "length": 6,
       "value": "\"2A38\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2474,
+      "offset": 2591,
       "length": 38,
       "value": "\"66880000-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2567,
+      "offset": 2684,
       "length": 38,
       "value": "\"66880001-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2661,
+      "offset": 2778,
       "length": 38,
       "value": "\"66880002-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2748,
+      "offset": 2865,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2849,
+      "offset": 2966,
       "length": 6,
       "value": "\"FF00\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2907,
+      "offset": 3024,
       "length": 6,
       "value": "\"FF01\""
     },
