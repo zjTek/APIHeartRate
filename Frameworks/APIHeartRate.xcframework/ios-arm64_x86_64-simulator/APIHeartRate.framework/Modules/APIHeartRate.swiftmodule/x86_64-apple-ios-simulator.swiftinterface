@@ -183,7 +183,7 @@ public protocol APIHeartRateObserver {
   func summaryCalorieInfo(info: [[Swift.String : Any]])
   func summarySleepInfo(info: [[Swift.String : Any]])
   func summaryExerciseInfo(info: [[Swift.String : Any]])
-  func motionDataInfo(info: [[Swift.String : Any]])
+  func motionDataInfo(info: [[Swift.String : Any]], isSport: Swift.Bool)
 }
 extension APIHeartRate.APIHeartRateObserver {
   public func devicePower(power: Swift.String, device: APIHeartRate.BleDevice)
@@ -228,7 +228,7 @@ extension APIHeartRate.APIHeartRateObserver {
   public func summaryCalorieInfo(info: [[Swift.String : Any]])
   public func summarySleepInfo(info: [[Swift.String : Any]])
   public func summaryExerciseInfo(info: [[Swift.String : Any]])
-  public func motionDataInfo(info: [[Swift.String : Any]])
+  public func motionDataInfo(info: [[Swift.String : Any]], isSport: Swift.Bool)
 }
 @_hasMissingDesignatedInitializers public class HRRemoteCentral : APIHeartRate.HRRemotePeer {
   @objc deinit
@@ -273,6 +273,7 @@ extension APIHeartRate.APIHeartRateObserver {
   public func getSummarySleep(startDateStamp: Swift.Double, endDateStamp: Swift.Double)
   public func getExerciseData(startDateStamp: Swift.Double, endDateStamp: Swift.Double)
   public func getMotionData(pageSize: Swift.Int, sportMode: Swift.Bool)
+  public func updateSeq(pageSize: Swift.Int, sportMode: Swift.Bool)
   @objc deinit
 }
 public func == (lhs: APIHeartRate.BleAvailability, rhs: APIHeartRate.BleAvailability) -> Swift.Bool
