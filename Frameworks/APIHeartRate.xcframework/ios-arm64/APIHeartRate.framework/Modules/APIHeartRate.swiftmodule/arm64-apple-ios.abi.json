@@ -5727,6 +5727,33 @@
           },
           {
             "kind": "Function",
+            "name": "motionDataSeqUpdated",
+            "printedName": "motionDataSeqUpdated(isSport:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP20motionDataSeqUpdated7isSportySb_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP20motionDataSeqUpdated7isSportySb_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "devicePower",
             "printedName": "devicePower(power:device:)",
             "children": [
@@ -7217,6 +7244,32 @@
             "declKind": "Func",
             "usr": "s:12APIHeartRate0aB8ObserverPAAE14motionDataInfo4info7isSportySaySDySSypGG_SbtF",
             "mangledName": "$s12APIHeartRate0aB8ObserverPAAE14motionDataInfo4info7isSportySaySDySSypGG_SbtF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "motionDataSeqUpdated",
+            "printedName": "motionDataSeqUpdated(isSport:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE20motionDataSeqUpdated7isSportySb_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE20motionDataSeqUpdated7isSportySb_tF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -12554,6 +12607,13 @@
       "offset": 888,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1110,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRPeer.swift",
