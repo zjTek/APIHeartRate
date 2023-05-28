@@ -5754,6 +5754,33 @@
           },
           {
             "kind": "Function",
+            "name": "currentBandTime",
+            "printedName": "currentBandTime(timeNow:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverP15currentBandTime7timeNowySd_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP15currentBandTime7timeNowySd_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "devicePower",
             "printedName": "devicePower(power:device:)",
             "children": [
@@ -7275,6 +7302,32 @@
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
             "isFromExtension": true,
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "currentBandTime",
+            "printedName": "currentBandTime(timeNow:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE15currentBandTime7timeNowySd_tF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE15currentBandTime7timeNowySd_tF",
+            "moduleName": "APIHeartRate",
+            "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
+            "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Protocol",
@@ -8441,6 +8494,26 @@
             "declKind": "Func",
             "usr": "s:12APIHeartRate0aB7ManagerC9updateSeq8pageSize9sportModeySi_SbtF",
             "mangledName": "$s12APIHeartRate0aB7ManagerC9updateSeq8pageSize9sportModeySi_SbtF",
+            "moduleName": "APIHeartRate",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "requestCurrentTime",
+            "printedName": "requestCurrentTime()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate0aB7ManagerC18requestCurrentTimeyyF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC18requestCurrentTimeyyF",
             "moduleName": "APIHeartRate",
             "declAttributes": [
               "AccessControl"
@@ -12058,56 +12131,56 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1256,
+      "offset": 1285,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1281,
+      "offset": 1310,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1364,
+      "offset": 1389,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1531,
+      "offset": 1548,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "StringLiteral",
-      "offset": 1635,
+      "offset": 1648,
       "length": 21,
       "value": "\"yyyy-MM-dd HH:mm:ss\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1730,
+      "offset": 1739,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1781,
+      "offset": 1790,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Dictionary",
-      "offset": 1875,
+      "offset": 1884,
       "length": 3,
       "value": "[]"
     },
@@ -12289,280 +12362,287 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 731,
+      "offset": 726,
+      "length": 4,
+      "value": "0x10"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
+      "kind": "IntegerLiteral",
+      "offset": 771,
       "length": 4,
       "value": "0x20"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 776,
+      "offset": 816,
       "length": 4,
       "value": "0x21"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 823,
+      "offset": 863,
       "length": 4,
       "value": "0x22"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 868,
+      "offset": 908,
       "length": 4,
       "value": "0x23"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 915,
+      "offset": 955,
       "length": 4,
       "value": "0x24"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 962,
+      "offset": 1002,
       "length": 4,
       "value": "0x25"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1011,
+      "offset": 1051,
       "length": 4,
       "value": "0x26"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1058,
+      "offset": 1098,
       "length": 4,
       "value": "0x27"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1105,
+      "offset": 1145,
       "length": 4,
       "value": "0x28"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1152,
+      "offset": 1192,
       "length": 4,
       "value": "0x29"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1201,
+      "offset": 1241,
       "length": 4,
       "value": "0x2a"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1248,
+      "offset": 1288,
       "length": 4,
       "value": "0x2b"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1295,
+      "offset": 1335,
       "length": 4,
       "value": "0x2c"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1342,
+      "offset": 1382,
       "length": 4,
       "value": "0x2d"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1391,
+      "offset": 1431,
       "length": 4,
       "value": "0x2e"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1438,
+      "offset": 1478,
       "length": 4,
       "value": "0x2f"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1489,
+      "offset": 1529,
       "length": 4,
       "value": "0x30"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1540,
+      "offset": 1580,
       "length": 4,
       "value": "0x31"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1593,
+      "offset": 1633,
       "length": 4,
       "value": "0x32"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "IntegerLiteral",
-      "offset": 1644,
+      "offset": 1684,
       "length": 4,
       "value": "0x33"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1727,
+      "offset": 1767,
       "length": 6,
       "value": "\"180F\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1789,
+      "offset": 1829,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1847,
+      "offset": 1887,
       "length": 6,
       "value": "\"FEE7\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1905,
+      "offset": 1945,
       "length": 6,
       "value": "\"FEC9\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 1967,
+      "offset": 2007,
       "length": 6,
       "value": "\"180A\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2026,
+      "offset": 2066,
       "length": 6,
       "value": "\"2A29\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2086,
+      "offset": 2126,
       "length": 6,
       "value": "\"2A24\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2149,
+      "offset": 2189,
       "length": 6,
       "value": "\"2A27\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2212,
+      "offset": 2252,
       "length": 6,
       "value": "\"2A26\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2275,
+      "offset": 2315,
       "length": 6,
       "value": "\"2A28\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2335,
+      "offset": 2375,
       "length": 6,
       "value": "\"2A23\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2399,
+      "offset": 2439,
       "length": 6,
       "value": "\"180D\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2465,
+      "offset": 2505,
       "length": 6,
       "value": "\"2A37\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2529,
+      "offset": 2569,
       "length": 6,
       "value": "\"2A38\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2591,
+      "offset": 2631,
       "length": 38,
       "value": "\"66880000-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2684,
+      "offset": 2724,
       "length": 38,
       "value": "\"66880001-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2778,
+      "offset": 2818,
       "length": 38,
       "value": "\"66880002-0000-1000-8000-008012563489\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2865,
+      "offset": 2905,
       "length": 6,
       "value": "\"2A19\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 2966,
+      "offset": 3006,
       "length": 6,
       "value": "\"FF00\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRServiceConst.swift",
       "kind": "StringLiteral",
-      "offset": 3024,
+      "offset": 3064,
       "length": 6,
       "value": "\"FF01\""
     },
@@ -12576,7 +12656,7 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp+Repo.swift",
       "kind": "IntegerLiteral",
-      "offset": 1584,
+      "offset": 1589,
       "length": 1,
       "value": "0"
     },
@@ -12607,13 +12687,6 @@
       "offset": 888,
       "length": 1,
       "value": "0"
-    },
-    {
-      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1110,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/HRPeer.swift",

@@ -10,3 +10,4 @@ APIHeartRate/*.framework
 APIHeartRate/archives
 APIHeartRate/*.podspec
 APIHeartRate/test/
+APIHeartRate/Frameworks
