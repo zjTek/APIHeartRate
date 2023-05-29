@@ -12131,70 +12131,70 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1285,
+      "offset": 1461,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1310,
+      "offset": 1486,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1389,
+      "offset": 1565,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "IntegerLiteral",
-      "offset": 1548,
+      "offset": 1724,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "StringLiteral",
-      "offset": 1648,
+      "offset": 1824,
       "length": 21,
       "value": "\"yyyy-MM-dd HH:mm:ss\""
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1739,
+      "offset": 1915,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1790,
+      "offset": 1966,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Dictionary",
-      "offset": 1884,
+      "offset": 2060,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1938,
+      "offset": 2114,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/DataAccessManager.swift",
       "kind": "Array",
-      "offset": 1990,
+      "offset": 2166,
       "length": 2,
       "value": "[]"
     },
