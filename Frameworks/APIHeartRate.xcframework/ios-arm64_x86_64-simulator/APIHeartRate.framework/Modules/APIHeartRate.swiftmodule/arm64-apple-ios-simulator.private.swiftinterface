@@ -279,6 +279,7 @@ extension APIHeartRate.APIHeartRateObserver {
   public func getMotionData(pageSize: Swift.Int, sportMode: Swift.Bool)
   public func updateSeq(pageSize: Swift.Int, sportMode: Swift.Bool)
   public func requestCurrentTime()
+  public func keepSportAlive()
   @objc deinit
 }
 public func == (lhs: APIHeartRate.BleAvailability, rhs: APIHeartRate.BleAvailability) -> Swift.Bool
