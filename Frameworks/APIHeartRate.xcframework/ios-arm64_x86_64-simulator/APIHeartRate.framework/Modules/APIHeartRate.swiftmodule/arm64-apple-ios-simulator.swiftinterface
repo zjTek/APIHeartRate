@@ -134,6 +134,16 @@ public enum DeviceMode {
     get
   }
 }
+public enum ModeType {
+  case other
+  case autoIn
+  case autoOut
+  public static func == (a: APIHeartRate.ModeType, b: APIHeartRate.ModeType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct FBKApiBaseInfo {
 }
 public struct HRInfo {
@@ -165,7 +175,7 @@ public protocol APIHeartRateObserver {
   func armBandUnbind()
   func batteryStatus(state: APIHeartRate.BatteryStatus)
   func heartRateInMeasuring()
-  func armBandModeChanged(mode: APIHeartRate.DeviceMode)
+  func armBandModeChanged(mode: APIHeartRate.DeviceMode, type: APIHeartRate.ModeType)
   func armBandRealTimePressure(pressure: Swift.Int, device: APIHeartRate.BleDevice)
   func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
@@ -212,7 +222,7 @@ extension APIHeartRate.APIHeartRateObserver {
   public func armBandUnbind()
   public func batteryStatus(state: APIHeartRate.BatteryStatus)
   public func heartRateInMeasuring()
-  public func armBandModeChanged(mode: APIHeartRate.DeviceMode)
+  public func armBandModeChanged(mode: APIHeartRate.DeviceMode, type: APIHeartRate.ModeType)
   public func armBandRealTimePressure(pressure: Swift.Int, device: APIHeartRate.BleDevice)
   public func bleConnectLog(logString: Swift.String, device: APIHeartRate.BleDevice?)
   public func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?)
@@ -277,7 +287,7 @@ extension APIHeartRate.APIHeartRateObserver {
   public func getSummarySleep(startDateStamp: Swift.Double, endDateStamp: Swift.Double)
   public func getExerciseData(startDateStamp: Swift.Double, endDateStamp: Swift.Double)
   public func getMotionData(pageSize: Swift.Int, sportMode: Swift.Bool)
-  public func updateSeq(pageSize: Swift.Int, sportMode: Swift.Bool)
+  public func updateSeq(sportMode: Swift.Bool)
   public func requestCurrentTime()
   public func keepSportAlive()
   @objc deinit
@@ -407,5 +417,7 @@ extension APIHeartRate.BatteryStatus : Swift.Equatable {}
 extension APIHeartRate.BatteryStatus : Swift.Hashable {}
 extension APIHeartRate.DeviceMode : Swift.Equatable {}
 extension APIHeartRate.DeviceMode : Swift.Hashable {}
+extension APIHeartRate.ModeType : Swift.Equatable {}
+extension APIHeartRate.ModeType : Swift.Hashable {}
 extension APIHeartRate.BleUnavailabilityCause : Swift.Equatable {}
 extension APIHeartRate.BleUnavailabilityCause : Swift.Hashable {}

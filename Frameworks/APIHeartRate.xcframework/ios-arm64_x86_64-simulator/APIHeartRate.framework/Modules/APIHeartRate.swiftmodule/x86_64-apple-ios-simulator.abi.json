@@ -4067,6 +4067,243 @@
       },
       {
         "kind": "TypeDecl",
+        "name": "ModeType",
+        "printedName": "ModeType",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "other",
+            "printedName": "other",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.ModeType.Type) -> APIHeartRate.ModeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModeType",
+                    "printedName": "APIHeartRate.ModeType",
+                    "usr": "s:12APIHeartRate8ModeTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.ModeType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ModeType",
+                        "printedName": "APIHeartRate.ModeType",
+                        "usr": "s:12APIHeartRate8ModeTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate8ModeTypeO5otheryA2CmF",
+            "mangledName": "$s12APIHeartRate8ModeTypeO5otheryA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Var",
+            "name": "autoIn",
+            "printedName": "autoIn",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.ModeType.Type) -> APIHeartRate.ModeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModeType",
+                    "printedName": "APIHeartRate.ModeType",
+                    "usr": "s:12APIHeartRate8ModeTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.ModeType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ModeType",
+                        "printedName": "APIHeartRate.ModeType",
+                        "usr": "s:12APIHeartRate8ModeTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate8ModeTypeO6autoInyA2CmF",
+            "mangledName": "$s12APIHeartRate8ModeTypeO6autoInyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Var",
+            "name": "autoOut",
+            "printedName": "autoOut",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(APIHeartRate.ModeType.Type) -> APIHeartRate.ModeType",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ModeType",
+                    "printedName": "APIHeartRate.ModeType",
+                    "usr": "s:12APIHeartRate8ModeTypeO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "APIHeartRate.ModeType.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ModeType",
+                        "printedName": "APIHeartRate.ModeType",
+                        "usr": "s:12APIHeartRate8ModeTypeO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:12APIHeartRate8ModeTypeO7autoOutyA2CmF",
+            "mangledName": "$s12APIHeartRate8ModeTypeO7autoOutyA2CmF",
+            "moduleName": "APIHeartRate"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModeType",
+                "printedName": "APIHeartRate.ModeType",
+                "usr": "s:12APIHeartRate8ModeTypeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModeType",
+                "printedName": "APIHeartRate.ModeType",
+                "usr": "s:12APIHeartRate8ModeTypeO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate8ModeTypeO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s12APIHeartRate8ModeTypeO2eeoiySbAC_ACtFZ",
+            "moduleName": "APIHeartRate",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:12APIHeartRate8ModeTypeO9hashValueSivp",
+            "mangledName": "$s12APIHeartRate8ModeTypeO9hashValueSivp",
+            "moduleName": "APIHeartRate",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:12APIHeartRate8ModeTypeO9hashValueSivg",
+                "mangledName": "$s12APIHeartRate8ModeTypeO9hashValueSivg",
+                "moduleName": "APIHeartRate",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:12APIHeartRate8ModeTypeO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s12APIHeartRate8ModeTypeO4hash4intoys6HasherVz_tF",
+            "moduleName": "APIHeartRate",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:12APIHeartRate8ModeTypeO",
+        "mangledName": "$s12APIHeartRate8ModeTypeO",
+        "moduleName": "APIHeartRate",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
         "name": "FBKApiBaseInfo",
         "printedName": "FBKApiBaseInfo",
         "declKind": "Struct",
@@ -4971,7 +5208,7 @@
           {
             "kind": "Function",
             "name": "armBandModeChanged",
-            "printedName": "armBandModeChanged(mode:)",
+            "printedName": "armBandModeChanged(mode:type:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -4983,11 +5220,17 @@
                 "name": "DeviceMode",
                 "printedName": "APIHeartRate.DeviceMode",
                 "usr": "s:12APIHeartRate10DeviceModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModeType",
+                "printedName": "APIHeartRate.ModeType",
+                "usr": "s:12APIHeartRate8ModeTypeO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB8ObserverP18armBandModeChanged4modeyAA06DeviceF0O_tF",
-            "mangledName": "$s12APIHeartRate0aB8ObserverP18armBandModeChanged4modeyAA06DeviceF0O_tF",
+            "usr": "s:12APIHeartRate0aB8ObserverP18armBandModeChanged4mode4typeyAA06DeviceF0O_AA0F4TypeOtF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverP18armBandModeChanged4mode4typeyAA06DeviceF0O_AA0F4TypeOtF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -6542,7 +6785,7 @@
           {
             "kind": "Function",
             "name": "armBandModeChanged",
-            "printedName": "armBandModeChanged(mode:)",
+            "printedName": "armBandModeChanged(mode:type:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -6554,11 +6797,17 @@
                 "name": "DeviceMode",
                 "printedName": "APIHeartRate.DeviceMode",
                 "usr": "s:12APIHeartRate10DeviceModeO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ModeType",
+                "printedName": "APIHeartRate.ModeType",
+                "usr": "s:12APIHeartRate8ModeTypeO"
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB8ObserverPAAE18armBandModeChanged4modeyAA06DeviceF0O_tF",
-            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE18armBandModeChanged4modeyAA06DeviceF0O_tF",
+            "usr": "s:12APIHeartRate0aB8ObserverPAAE18armBandModeChanged4mode4typeyAA06DeviceF0O_AA0F4TypeOtF",
+            "mangledName": "$s12APIHeartRate0aB8ObserverPAAE18armBandModeChanged4mode4typeyAA06DeviceF0O_AA0F4TypeOtF",
             "moduleName": "APIHeartRate",
             "genericSig": "<τ_0_0 where τ_0_0 : APIHeartRate.APIHeartRateObserver>",
             "sugared_genericSig": "<Self where Self : APIHeartRate.APIHeartRateObserver>",
@@ -8471,18 +8720,12 @@
           {
             "kind": "Function",
             "name": "updateSeq",
-            "printedName": "updateSeq(pageSize:sportMode:)",
+            "printedName": "updateSeq(sportMode:)",
             "children": [
               {
                 "kind": "TypeNominal",
                 "name": "Void",
                 "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
               },
               {
                 "kind": "TypeNominal",
@@ -8492,8 +8735,8 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:12APIHeartRate0aB7ManagerC9updateSeq8pageSize9sportModeySi_SbtF",
-            "mangledName": "$s12APIHeartRate0aB7ManagerC9updateSeq8pageSize9sportModeySi_SbtF",
+            "usr": "s:12APIHeartRate0aB7ManagerC9updateSeq9sportModeySb_tF",
+            "mangledName": "$s12APIHeartRate0aB7ManagerC9updateSeq9sportModeySb_tF",
             "moduleName": "APIHeartRate",
             "declAttributes": [
               "AccessControl"
@@ -12242,7 +12485,7 @@
     {
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateObserver.swift",
       "kind": "StringLiteral",
-      "offset": 779,
+      "offset": 852,
       "length": 21,
       "value": "\"yyyy-mm-dd HH:mm:ss\""
     },
@@ -12726,6 +12969,13 @@
       "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
       "kind": "IntegerLiteral",
       "offset": 888,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/Tek\/LocalProject\/bands\/APIHeartRate\/APIHeartRate\/APIHeartRateImp.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1054,
       "length": 1,
       "value": "0"
     },
