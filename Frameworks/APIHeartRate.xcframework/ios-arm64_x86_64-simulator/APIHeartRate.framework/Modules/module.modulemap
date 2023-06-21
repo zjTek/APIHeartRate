@@ -1,4 +1,0 @@
-framework module APIHeartRate {
-  header "APIHeartRate-Swift.h"
-  requires objc
-}
