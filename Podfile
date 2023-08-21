@@ -6,7 +6,7 @@ target 'testapihr' do
   use_frameworks!
 
   # Pods for testapihr
-  pod 'APIHeartRate', '0.2.1'
+  pod 'APIHeartRate', '0.2.9'
   pod 'IQKeyboardManager'
   pod 'SSZipArchive','2.0.7'
 end

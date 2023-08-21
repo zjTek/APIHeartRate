@@ -9,7 +9,7 @@ import APIHeartRate
 import IHProgressHUD
 import SnapKit
 import SSZipArchive
-import SwiftXLSX
+//import SwiftXLSX
 import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIHeartRateObserver {
     static let CONNECTED_KEY = "contected_device"
@@ -67,7 +67,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     lazy var exportBtn: TestBtn = {
         let btn = TestBtn(frame: CGRect.zero, title: "导出心率数据") { [weak self] _ in
-            self?.exportExls()
+           // self?.exportExls()
         }
         btn.isEnabled = false
         return btn
@@ -224,41 +224,41 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         UIApplication.shared.isIdleTimerDisabled = sender.isOn
     }
 
-    func exportExls() {
-        if dataHeart.isEmpty {
-            IHProgressHUD.showError(withStatus: "没有心率数据")
-            return
-        }
-        IHProgressHUD.show()
-        let book = XWorkBook()
-        let sheet = book.NewSheet("心率数据")
-
-        for row in 1 ... dataHeart.count {
-            sheet.ForColumnSetWidth(row, 80)
-            let item = dataHeart[row - 1]
-            let cell = sheet.AddCell(XCoords(row: row, col: 1))
-            cell.value = .text(item.time)
-            let cell2 = sheet.AddCell(XCoords(row: row, col: 2))
-            cell2.value = .text(item.rateStr)
-        }
-        let files = book.save("test.xlsx")
-        print("<<<File XLSX generated!>>>")
-        print("\(files)")
-        if let lastIndex = files.lastIndex(of: "/") {
-            let prefixPath = files[files.startIndex ..< lastIndex]
-            let newPath = String(prefixPath) + "/rate.xlsx"
-            let ok = SSZipArchive.createZipFile(atPath: newPath, withContentsOfDirectory: files, keepParentDirectory: false, withPassword: nil)
-            IHProgressHUD.dismiss()
-            if ok {
-                _ = RemoveFile(path: files)
-                let fileUrl = NSURL(fileURLWithPath: newPath)
-                let shareV = UIActivityViewController(activityItems: [fileUrl], applicationActivities: nil)
-                present(shareV, animated: true)
-            }
-        } else {
-            IHProgressHUD.dismiss()
-        }
-    }
+//    func exportExls() {
+//        if dataHeart.isEmpty {
+//            IHProgressHUD.showError(withStatus: "没有心率数据")
+//            return
+//        }
+//        IHProgressHUD.show()
+//        let book = XWorkBook()
+//        let sheet = book.NewSheet("心率数据")
+//
+//        for row in 1 ... dataHeart.count {
+//            sheet.ForColumnSetWidth(row, 80)
+//            let item = dataHeart[row - 1]
+//            let cell = sheet.AddCell(XCoords(row: row, col: 1))
+//            cell.value = .text(item.time)
+//            let cell2 = sheet.AddCell(XCoords(row: row, col: 2))
+//            cell2.value = .text(item.rateStr)
+//        }
+//        let files = book.save("test.xlsx")
+//        print("<<<File XLSX generated!>>>")
+//        print("\(files)")
+//        if let lastIndex = files.lastIndex(of: "/") {
+//            let prefixPath = files[files.startIndex ..< lastIndex]
+//            let newPath = String(prefixPath) + "/rate.xlsx"
+//            let ok = SSZipArchive.createZipFile(atPath: newPath, withContentsOfDirectory: files, keepParentDirectory: false, withPassword: nil)
+//            IHProgressHUD.dismiss()
+//            if ok {
+//                _ = RemoveFile(path: files)
+//                let fileUrl = NSURL(fileURLWithPath: newPath)
+//                let shareV = UIActivityViewController(activityItems: [fileUrl], applicationActivities: nil)
+//                present(shareV, animated: true)
+//            }
+//        } else {
+//            IHProgressHUD.dismiss()
+//        }
+//    }
 
     private func RemoveFile(path pathfile: String) -> Bool {
         do {
@@ -430,8 +430,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func bleCommonError(error: APIHeartRate.BleCommonError) {
     }
-
-    func bleConnectStatus(status: DeviceBleStatus, device: BleDevice?) {
+    
+    
+    func bleConnectStatus(status: APIHeartRate.DeviceBleStatus, device: APIHeartRate.BleDevice?){
+        print("status=========>\(status)")
         IHProgressHUD.dismiss()
         isConnecting = false
         switch status {
