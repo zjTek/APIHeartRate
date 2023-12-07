@@ -10,7 +10,7 @@ jobs:
   testing_job: # Define a job named `testing_job`  
     runs-on: macos-latest # Run the job on the `macos-latest` operating system  
     steps:  
-    - uses: actions/checkout@v3 # Use the `actions/checkout` action to check out the repository's code  
+    - uses: actions/checkout@v4 # Use the `actions/checkout` action to check out the repository's code  
     - uses: actions/cache@v3 # Use the `actions/cache` action to cache the Pods directory  
       with:  
         path: Pods  
@@ -18,10 +18,8 @@ jobs:
         restore-keys: |  
           ${{ runner.os }}-pods-  
     - name: CocoaPods Install # Install CocoaPods dependencies  
-      run: |  
-        cd APIHeartRate # Position yourself inside the file that contains your podfile  
+      run: | # cd APIHeartRate # Position yourself inside the file that contains your podfile  
         pod install  
     - name: Test # Run tests for the BBL project  
-      run: |  
-        cd APIHeartRate  # Position yourself inside the file that contains your YourProjectName.xcworkspace file
+      run: |  #   cd APIHeartRate  # Position yourself inside the file that contains your YourProjectName.xcworkspace file
         xcodebuild -workspace APIHeartRate.xcworkspace -scheme BBL -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 12' test  
